@@ -12,9 +12,7 @@ body{
     display:flex;
     justify-content:center;
     text-transform:uppercase;
-    font-size:1em;
-    font-weight: bold;
-    
+    font-size:16px;
 }
 .navigation-menu  .navigation-list ul{
     display:flex;
@@ -23,12 +21,14 @@ body{
     align-items: center;
 }
 .navigation-menu  .navigation-list ul li{
-    padding:20px;
-    color:#8f969d;
+    padding:25px 19px;
+   
+    margin-top:6px;
 }
 .navigation-menu  .navigation-list ul li a{
-    color:#8f969d;
+    color:#fff;
     text-decoration:none;
+
 
 }
 .navigation-menu  .navigation-list .navigation-buttons{
@@ -38,13 +38,108 @@ body{
 }
 .navigation-buttons button{
     background-color: #FF6622;
-    padding:15px 35px; 
+    margin-left:4px;
+    padding:10px 35px; 
     border-radius: 30px;
     border:none;
-    font-size:1em;
+    font-size:16px;
     color:#fff;
     font-weight: bold;
     text-transform: uppercase;
-    
-
+    margin-bottom:5px;
 }
+.header-icon picture img{
+    margin-top:20px;
+    padding-right:110px;
+}
+/*Style Slider */
+.home-page{
+    background-image: url("/img/programacionweb.png") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100vw;
+    height:100vh;
+}
+.slider{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+.slider h1{
+    font-size: 79px;
+    color:#fff;
+    margin-top:180px;
+    
+}
+.slider p{
+    font-size: 28px;
+    color:#fff;
+    font-weight: bold;  
+}
+.slider a
+{
+    margin-top:100px;
+    height: 60px;
+    width: 300px;
+    border-radius: 30px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color:#fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    cursor: pointer;
+    padding:15px;
+}
+
+.slider a:hover
+{
+    animation: animate 8s linear infinite;
+    color:black;
+}
+
+
+.slider a:before
+{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.slider a:hover:before
+{
+    filter: blur(20px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0%;
+    }
+    100%
+    {
+        background-position: 400%;
+    }
+}
+
+
