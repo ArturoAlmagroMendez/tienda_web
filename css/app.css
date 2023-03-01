@@ -3,113 +3,162 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
+
 /*Nav Style*/
 .navigation-menu {
-    display:flex;
-    justify-content:center;
-    text-transform:uppercase;
-    font-size:16px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-right: 4em;
+
 }
-.navigation-menu  .navigation-list ul{
-    display:flex;
+
+.navigation-menu .navigation-list ul {
+    display: flex;
     justify-content: center;
     list-style: none;
     align-items: center;
 }
-.navigation-menu  .navigation-list ul li{
-    padding:25px 19px;
-   
-    margin-top:6px;
+
+.navigation-menu .navigation-list ul li {
+    padding: 25px 19px;
+
+    margin-top: 6px;
 }
-.navigation-menu  .navigation-list ul li a{
-    color:#fff;
-    text-decoration:none;
+
+.navigation-menu .navigation-list ul li a {
+    color: #fff;
+    text-decoration: none;
 
 
 }
-.navigation-menu  .navigation-list .navigation-buttons{
-    display:flex;
+
+.navigation-menu .navigation-list .navigation-buttons {
+    display: flex;
     justify-content: center;
-    
+
 }
-.navigation-buttons button{
-    background-color: #FF6622;
-    margin-left:4px;
-    padding:10px 35px; 
+
+.navigation-buttons button {
+    background-color: #36d177;
+    margin-left: 4px;
+    padding: 10px 35px;
     border-radius: 30px;
-    border:none;
-    font-size:16px;
-    color:#fff;
+    border: none;
+    font-size: 16px;
+    color: #fff;
     font-weight: bold;
     text-transform: uppercase;
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
-.header-icon picture img{
-    margin-top:20px;
-    padding-right:110px;
+
+.header-icon picture img {
+    margin-top: 25px;
+    padding-right: 110px;
 }
+
 /*Style Slider */
-.home-page{
-    background-image: url("/img/programacionweb.png") ;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width:100vw;
-    height:100vh;
+.home-page {
+    background-color: #121212;
+    width: 100vw;
+    height: 100vh;
+
 }
-.slider{
-    display:flex;
+
+.slider {
+    display: flex;
     justify-content: center;
     text-align: center;
 }
-.slider h1{
+
+/******************************************TITLE/ */
+.slider h1 {
     font-size: 79px;
-    color:#fff;
-    margin-top:180px;
+    color: #fff;
+    margin-top: 180px;
     
 }
+
+/* ********************************************** */
+
 .slider p{
+    
+    border-right: solid 3px rgba(0, 255, 0, .75);
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: 'Source Code Pro', monospace;
     font-size: 28px;
-    color:#fff;
-    font-weight: bold;  
+    color: rgba(255, 255, 255, .70);
 }
-.slider a
-{
-    margin-top:100px;
+
+/*ANIMATION .slider p */
+/* Animation */
+p {
+    animation: animated-text 4s steps(29, end) 1s 1 normal both,
+        animated-cursor 600ms steps(29, end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 986px;
+    }
+}
+
+/* Button animations */
+
+@keyframes animated-cursor {
+    from {
+        border-right-color: rgba(0, 255, 0, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.slider a {
+   
     height: 60px;
     width: 300px;
-    border-radius: 30px; 
+    border-radius: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
-    color:#fff;
+    color: #fff;
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     box-sizing: border-box;
-    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
     background-size: 400%;
     cursor: pointer;
-    padding:15px;
-}
-
-.slider a:hover
-{
+    padding: 15px;
     animation: animate 8s linear infinite;
-    color:black;
+}
+
+.slider a:hover {
+    animation: animate 8s linear infinite;
+    color: black;
 }
 
 
-.slider a:before
-{
+.slider a:before {
     content: '';
     position: absolute;
     top: -5px;
@@ -117,29 +166,25 @@ body{
     bottom: -5px;
     right: -5px;
     z-index: -1;
-    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
     background-size: 400%;
     border-radius: 40px;
     opacity: 0;
     transition: 1s;
 }
 
-.slider a:hover:before
-{
+.slider a:hover:before {
     filter: blur(20px);
     opacity: 1;
     animation: animate 8s linear infinite;
 }
-@keyframes animate
-{
-    0%
-    {
+
+@keyframes animate {
+    0% {
         background-position: 0%;
     }
-    100%
-    {
+
+    100% {
         background-position: 400%;
     }
 }
-
-
