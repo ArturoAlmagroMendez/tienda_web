@@ -82,13 +82,13 @@ body {
     font-size: 79px;
     color: #fff;
     margin-top: 180px;
-    
+
 }
 
 /* ********************************************** */
 
-.slider p{
-    
+.slider p {
+
     border-right: solid 3px rgba(0, 255, 0, .75);
     white-space: nowrap;
     overflow: hidden;
@@ -99,7 +99,7 @@ body {
 
 /*ANIMATION .slider p */
 /* Animation */
-p {
+.slider p {
     animation: animated-text 4s steps(29, end) 1s 1 normal both,
         animated-cursor 600ms steps(29, end) infinite;
 }
@@ -116,75 +116,38 @@ p {
     }
 }
 
-/* Button animations */
 
-@keyframes animated-cursor {
-    from {
-        border-right-color: rgba(0, 255, 0, .75);
-    }
 
-    to {
-        border-right-color: transparent;
-    }
+/**************** Product Page *****************/
+.product-page {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color:#434040
 }
-
-.slider a {
-   
-    height: 60px;
-    width: 300px;
-    border-radius: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.product-page .product-container{
     text-align: center;
-    color: #fff;
-    font-size: 20px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    box-sizing: border-box;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    background-size: 400%;
-    cursor: pointer;
-    padding: 15px;
-    animation: animate 8s linear infinite;
+    margin-top:110px;
+    color:#fff;
+ }
+
+.product-page h3 {
+    font-size: 59px;
 }
-
-.slider a:hover {
-    animation: animate 8s linear infinite;
-    color: black;
+.product-page .product-image{
+    display:flex;
+    justify-content: center;
 }
-
-
-.slider a:before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    bottom: -5px;
-    right: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    background-size: 400%;
-    border-radius: 40px;
-    opacity: 0;
-    transition: 1s;
+.product-page .product-image img{
+    height:300px;
+    width:500px;
+    margin-top:100px;
 }
-
-.slider a:hover:before {
-    filter: blur(20px);
-    opacity: 1;
-    animation: animate 8s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        background-position: 0%;
-    }
-
-    100% {
-        background-position: 400%;
-    }
+.divider{
+    display:inline-block;
+    width:100px;
+    height:6px;
+    background-color: grey;
+    
 }
