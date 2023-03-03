@@ -1,46 +1,199 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+/******* PLANTILLA CSS ******/
 body {
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  min-height: 100vh;
+  width: 100%;
+}
+main {
+  margin: 1rem 0;
+  width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+a,
+p {
+  font-family: "Poppins", sans-serif;
 }
 
-/*Nav Style*/
-.navigation-menu {
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin-right: 4em;
-
+h1 {
+  font-size: 4em;
+  color: #fff;
+  text-decoration: none;
 }
 
-.navigation-menu .navigation-list ul {
+h2 {
+  font-size: 3em;
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 2em;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 300ms;
+}
+a:hover,
+a:focus {
+  outline: none;
+  text-decoration: none;
+  outline-offset: 0;
+}
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+video {
+  max-width: 100%;
+}
+
+/************************HEADER Style************************/
+header {
+  background-color: #fff;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  left: 0; /* Posicionamos la cabecera al lado izquierdo */
+  position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+  top: 0; /* Posicionamos la cabecera pegada arriba */
+  text-transform: uppercase;
+  width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+}
+
+.header-icon {
+  margin-top: 20px;
+  padding-right: 100px;
+}
+
+nav .nav-list {
+  padding: 30px;
+}
+
+nav .nav-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+nav .nav-list ul li {
+  color: #121212;
+}
+
+.nav-button {
+  padding: 30px;
+}
+
+.nav-button button {
+  background-color: rgba(0, 247, 41, 0.7);
+  border-radius: 30px;
+  border: none;
+  color: #121212;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5em 0.5em;
+}
+.nav-button button:hover {
+  background-color: #121212;
+  color: #fff;
+}
+/********************STYLE SLIDER*********************/
+.slider {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.slider-img {
+}
+.slider-title {
+}
+.slider-text {
+}
+.slider-button {
+}
+.slider-button button {
+  background-color: green;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  padding: 1em 1em;
+}
+.slider-button button:hover {
+  background-color: #fff;
+}
+
+/********************* STYLE FEATURED ***********************/
+
+.featured {
+  height: 100vh;
+  width: 100%;
+  background-color: grey;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+ 
+}
+.featured-title {
+
+}
+.featured-subtitle{
+
+}
+.featured .featured-content {
     display: flex;
-    justify-content: center;
+}
+.featured .featured-content .featured-item{
+    align-items: center;
+    display:flex;
+    flex-direction: column;
+}
+.featured .featured-content .featured-item::before{
+    content: ">";
+}
+
+/*nav .nav-list ul{
+    display: flex;
+    justify-content: space-between;
     list-style: none;
     align-items: center;
 }
-
-.navigation-menu .navigation-list ul li {
-    padding: 25px 19px;
-
-    margin-top: 6px;
-}
-
-.navigation-menu .navigation-list ul li a {
-    color: #fff;
+.nav-list ul li a {
+    color: #070606;
     text-decoration: none;
-
-
 }
 
-.navigation-button button {
-    background-color: #36d177;
+.nav-button button {
+    background-color: rgba(0, 247, 41, 0.7);
     margin-left: 4px;
     padding: 10px 35px;
     border-radius: 30px;
@@ -53,41 +206,52 @@ body {
 }
 
 .header-icon picture img {
-    margin-top: 25px;
+    margin-top: 20px;
     padding-right: 110px;
 }
 
 /*****************************Style Slider *********************************/
-.home-page {
-    background-color: #121212;
-    width: 100vw;
-    height: 100vh;
-}
-
+/*
 .slider {
-    display: flex;
-    justify-content: center;
     text-align: center;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    height:100vh;
+    width: 100%;
+    background-color: #121212;
 }
 
-.slider h1 {
-    font-size: 79px;
-    color: #fff;
-    margin-top: 180px;
-}
-
-.slider p {
+*/
+/*ANIMATION .slider p */
+/* Animation */
+/*
+.slider .slider-text p {
     border-right: solid 3px rgba(0, 255, 0, .75);
     white-space: nowrap;
     overflow: hidden;
     font-family: 'Source Code Pro', monospace;
     font-size: 28px;
-    color: rgba(255, 255, 255, .70);
+    color: rgba(0, 247, 41, 0.7); 
+    animation: animated-text 4s steps(29, end) 1s 1 normal both,
+        animated-cursor 600ms steps(29, end) infinite;
+}
+*/
+/* text animation */
+/*
+@keyframes animated-text {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
-.slider button{
-    background-color: #36d177;
-    margin-left: 4px;
+.slider-button button{
+    background-color:rgba(0, 247, 41, 0.7);
     padding: 10px 35px;
     border-radius: 30px;
     border: none;
@@ -97,57 +261,5 @@ body {
     text-transform: uppercase;
     margin-top: 20px;
 }
-/*ANIMATION .slider p */
-/* Animation */
-.slider p {
-    animation: animated-text 6s steps(29, end) 1s 1 normal both,
-        animated-cursor 600ms steps(29, end) infinite;
-}
 
-/* text animation */
-
-@keyframes animated-text {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 986px;
-    }
-}
-
-
-
-/**************** Product Page *****************/
-.product-page {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background-color:#434040
-}
-.product-page .product-container{
-    text-align: center;
-    margin-top:110px;
-    color:#fff;
- }
-
-.product-page h3 {
-    font-size: 59px;
-}
-.product-page .product-image{
-    display:flex;
-    justify-content: center;
-}
-.product-page .product-image img{
-    height:300px;
-    width:500px;
-    margin-top:100px;
-}
-.divider{
-    display:inline-block;
-    width:100px;
-    height:6px;
-    background-color: grey;
-    
-}
+*/
