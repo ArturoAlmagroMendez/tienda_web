@@ -10,12 +10,10 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
   min-height: 100vh;
   width: 100%;
 }
 main {
-  margin: 1rem 0;
   width: 100%;
 }
 h1,
@@ -74,7 +72,6 @@ video {
 
 /************************HEADER Style************************/
 header {
-  background-color: #a6a5a5;
   display: flex;
   font-size: 16px;
   justify-content: center;
@@ -84,20 +81,16 @@ header {
   text-transform: uppercase;
   width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
   align-items: center;
-  opacity:0.7;
+  background-color: rgba(255, 255, 255, 0.5); /* 50% de opacidad */
+  height: 10vh;
 }
 
 .header-icon {
-  padding-right: 100px;
-  
+  padding-right: 100px; 
 }
 .header-icon img{
   height:100%;
   width:12em;
-}
-
-nav .nav-list {
-  
 }
 
 nav .nav-list ul {
@@ -131,10 +124,12 @@ nav .nav-list ul li a:hover{
   font-weight: bold;
   text-transform: uppercase;
   padding: 0.6em 0.6em;
+  cursor: pointer;
 }
 .nav-button button:hover {
   background-color: #121212;
   color: #fff;
+  transition:.6s ease-out;
 }
 /********************STYLE SLIDER*********************/
 .slider {
@@ -158,15 +153,25 @@ nav .nav-list ul li a:hover{
 }
 .slider-text {
 }
+.slider-button{
+  
+}
 .slider-button button {
-  background-color: rgba(0, 247, 41, 0.7);;
+  background-color: rgba(0, 247, 41, 0.7);
   border-radius: 30px;
   border: none;
   font-weight: bold;
   padding: 1em 1em;
+  height:95%;
+  cursor: pointer;
+  
 }
 .slider-button button:hover {
   background-color: #949191;
+  color:#fff;
+  /*font-size:1.2em;*/
+  transition:.5s ease-out;
+  
 }
 
 /********************* STYLE FEATURED ***********************/
@@ -174,7 +179,7 @@ nav .nav-list ul li a:hover{
 .featured {
   height: 100vh;
   width: 100%;
-  background-color: rgb(71, 70, 70);
+  background-color: rgb(0, 0, 0);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -189,18 +194,23 @@ nav .nav-list ul li a:hover{
   display: flex;
   width: 80%;
   text-align: center;
+  justify-content: space-evenly;
+  gap:4em;
+  
   
 }
 .featured .featured-content .featured-item {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap:1em;
   width:33%;
   height:18em;
+  gap:1em;
+
 }
 .featured .featured-content .featured-item::before {
   content: ">";
+  font-size: 4em;
 }
 .featured .featured-content .featured-item .featured-item-image {
   height: 100px;
@@ -249,12 +259,8 @@ nav .nav-list ul li a:hover{
   .details-item-description
   .details-item-description-title {
   font-weight: bold;
-}
-.details
-  .details-column
-  .details-column-item
-  .details-item-description
-  .details-item-description-text {
+  font-size: 1.8em;
+  margin-bottom:0.2em;
 }
 .details-column .details-image {
   width: 400px;
@@ -264,6 +270,7 @@ nav .nav-list ul li a:hover{
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  
 }
 
 /****************************TEAM STYLE*************************************/
@@ -274,7 +281,11 @@ nav .nav-list ul li a:hover{
   text-align: center;
   width: 100%;
   height: 100vh;
+  background-color: rgb(26, 26, 26);
   
+}
+.team .team-title{
+  font-size: 1.8em;
 }
 .team .team-text {
   margin-bottom: 3em;
@@ -316,8 +327,6 @@ nav .nav-list ul li a:hover{
   align-items: center;
   padding:3px 3px;
   cursor:pointer;
-  
-
 }
 .stick {
   width: 22px;
@@ -325,8 +334,12 @@ nav .nav-list ul li a:hover{
   border-radius: 4px;  
   background-color:  #000000;
   position: relative;
-  
-  
+}
+.team-content .team-item .team-item-title{
+  font-size: 1.8em;
+}
+.team-content .team-item .team-item-text-subtitle{
+  font-size: 0.8em;
 }
 .team-content .team-item .team-social-networks button{
   width:100%;
@@ -338,9 +351,9 @@ nav .nav-list ul li a:hover{
 /*************CONTACT STYLE*******************/
 
 .contact {
-  height: 80vh;
+  height: 90vh;
   width: 100%;
-  background-color: grey;
+  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,26 +410,32 @@ nav .nav-list ul li a:hover{
   transform: rotateY(180deg);
 }
 /*****************FOOTER STYLE******************/
+footer{
+  width:100%;
+  height: 10vh;
+  background-color: rgb(143, 217, 251);
 
+}
 .footer-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: #fff;
-  height: 10vh;
+  
 }
 .footer-content .social-networks {
   display: flex;
   justify-content: center;
-  gap: 2em;
+  gap: 1em;
 }
 .footer-content .social-networks img {
   height: 2em;
   width: 2em;
+  margin-bottom: 1em;
 }
-.footer-content .footer-menu {
+.footer-content .footer-menu ul {
   text-align: center;
   display: flex;
-  gap: 2em;
+  gap: 0.4em;
   justify-content: center;
+  
 }
