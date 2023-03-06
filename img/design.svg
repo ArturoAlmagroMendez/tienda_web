@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36px" height="36px" viewBox="0 0 36 36" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(81.568627%,84.313725%,87.45098%);fill-opacity:1;" d="M 27.75 3.75 L 21.75 3.75 L 21.75 1.5 C 21.75 0.671875 22.421875 0 23.25 0 L 26.25 0 C 27.078125 0 27.75 0.671875 27.75 1.5 Z M 27.75 3.75 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(99.607843%,81.568627%,28.627451%);fill-opacity:1;" d="M 21.75 6 L 27.75 6 L 27.75 30 L 21.75 30 Z M 21.75 6 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(28.627451%,66.666667%,93.333333%);fill-opacity:1;" d="M 21.75 3.75 L 27.75 3.75 L 27.75 6 L 21.75 6 Z M 21.75 3.75 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(99.215686%,87.843137%,72.941176%);fill-opacity:1;" d="M 24.75 36 L 21.75 30 L 27.75 30 Z M 24.75 36 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(29.803922%,40%,50.588235%);fill-opacity:1;" d="M 26.042969 33.414062 C 25.269531 32.863281 24.230469 32.863281 23.457031 33.414062 L 24.75 36 Z M 26.042969 33.414062 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(96.470588%,70.588235%,27.058824%);fill-opacity:1;" d="M 26.25 6 L 27.75 6 L 27.75 30 L 26.25 30 Z M 26.25 6 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(20%,59.607843%,83.921569%);fill-opacity:1;" d="M 26.25 3.75 L 27.75 3.75 L 27.75 6 L 26.25 6 Z M 26.25 3.75 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(99.607843%,81.568627%,28.627451%);fill-opacity:1;" d="M 10.5 0 C 9.671875 0.00390625 9.003906 0.671875 9 1.5 L 9 34.5 C 9.003906 35.328125 9.671875 35.996094 10.5 36 L 18.75 36 L 18.75 0 Z M 10.5 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(96.470588%,70.588235%,27.058824%);fill-opacity:1;" d="M 12.75 17.25 L 18.75 17.25 L 18.75 18.75 L 12.75 18.75 Z M 12.75 17.25 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(96.470588%,70.588235%,27.058824%);fill-opacity:1;" d="M 15 11.25 L 18.75 11.25 L 18.75 12.75 L 15 12.75 Z M 15 11.25 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(96.470588%,70.588235%,27.058824%);fill-opacity:1;" d="M 12.75 5.25 L 18.75 5.25 L 18.75 6.75 L 12.75 6.75 Z M 12.75 5.25 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(96.470588%,70.588235%,27.058824%);fill-opacity:1;" d="M 15 23.25 L 18.75 23.25 L 18.75 24.75 L 15 24.75 Z M 15 23.25 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(96.470588%,70.588235%,27.058824%);fill-opacity:1;" d="M 12.75 29.25 L 18.75 29.25 L 18.75 30.75 L 12.75 30.75 Z M 12.75 29.25 "/>
+</g>
+</svg>
