@@ -1,9 +1,9 @@
+/******* PLANTILLA CSS ******/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/******* PLANTILLA CSS ******/
 body {
   font-family: "Poppins", sans-serif;
   background-color: #121212;
@@ -74,7 +74,7 @@ video {
 
 /************************HEADER Style************************/
 header {
-  background-color: #fff;
+  background-color: #a6a5a5;
   display: flex;
   font-size: 16px;
   justify-content: center;
@@ -83,15 +83,21 @@ header {
   top: 0; /* Posicionamos la cabecera pegada arriba */
   text-transform: uppercase;
   width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+  align-items: center;
+  opacity:0.7;
 }
 
 .header-icon {
-  margin-top: 20px;
   padding-right: 100px;
+  
+}
+.header-icon img{
+  height:100%;
+  width:12em;
 }
 
 nav .nav-list {
-  padding: 30px;
+  
 }
 
 nav .nav-list ul {
@@ -102,13 +108,20 @@ nav .nav-list ul {
 }
 
 nav .nav-list ul li {
-  color: #121212;
+  color: #090707;
 }
-
+nav .nav-list ul li a {
+  color: #000000;
+  font-weight: bold;
+}
+nav .nav-list ul li a:hover{
+  color:#fff;
+  
+}
 .nav-button {
   padding: 30px;
+  
 }
-
 .nav-button button {
   background-color: rgba(0, 247, 41, 0.7);
   border-radius: 30px;
@@ -117,7 +130,7 @@ nav .nav-list ul li {
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 0.5em 0.5em;
+  padding: 0.6em 0.6em;
 }
 .nav-button button:hover {
   background-color: #121212;
@@ -132,6 +145,7 @@ nav .nav-list ul li {
   justify-content: center;
   text-align: center;
   width: 100%;
+  gap:1em;
 }
 .slider .slider-img {
   position: absolute;
@@ -144,17 +158,15 @@ nav .nav-list ul li {
 }
 .slider-text {
 }
-.slider-button {
-}
 .slider-button button {
-  background-color: green;
+  background-color: rgba(0, 247, 41, 0.7);;
   border-radius: 30px;
   border: none;
   font-weight: bold;
   padding: 1em 1em;
 }
 .slider-button button:hover {
-  background-color: #fff;
+  background-color: #949191;
 }
 
 /********************* STYLE FEATURED ***********************/
@@ -162,7 +174,7 @@ nav .nav-list ul li {
 .featured {
   height: 100vh;
   width: 100%;
-  background-color: grey;
+  background-color: rgb(71, 70, 70);
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -171,15 +183,18 @@ nav .nav-list ul li {
 .featured-title {
 }
 .featured-subtitle {
-  margin-bottom: 8em;
+  margin-bottom: 6em;
 }
 .featured .featured-content {
   display: flex;
+  width: 80%;
+  text-align: center;
 }
 .featured .featured-content .featured-item {
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap:1em;
 }
 .featured .featured-content .featured-item::before {
   content: ">";
@@ -214,13 +229,8 @@ nav .nav-list ul li {
   gap: 10px;
 }
 .details .details-column .details-column-item .details-item-svg {
-  height: 3em;
-  width: 5em;
-}
-.details .details-column .details-column-item .details-item-svg img {
-  height: 3em;
-  width: 3em;
-
+  height: 48px;
+  width: 48px;
 }
 .details
   .details-column
