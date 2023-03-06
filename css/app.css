@@ -189,12 +189,15 @@ nav .nav-list ul li a:hover{
   display: flex;
   width: 80%;
   text-align: center;
+  
 }
 .featured .featured-content .featured-item {
   align-items: center;
   display: flex;
   flex-direction: column;
   gap:1em;
+  width:33%;
+  height:18em;
 }
 .featured .featured-content .featured-item::before {
   content: ">";
@@ -207,6 +210,7 @@ nav .nav-list ul li a:hover{
   font-weight: bold;
 }
 .featured .featured-content .featured-item .featured-item-text {
+  
 }
 /*************************DETAILS STYLE********************************/
 
@@ -270,6 +274,7 @@ nav .nav-list ul li a:hover{
   text-align: center;
   width: 100%;
   height: 100vh;
+  
 }
 .team .team-text {
   margin-bottom: 3em;
@@ -278,23 +283,57 @@ nav .nav-list ul li a:hover{
   display: flex;
   justify-content: center;
   gap: 2em;
+ 
 }
 .team-content .team-item {
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap:0.5em;
 }
 .team-content .team-item .team-item-image {
   height: 14em;
   width: 12em;
+  position: relative;
+}
+.team-content .team-item .team-item-image img{
+  width:100%;
+  height:100%;
 }
 .team-content .team-item .team-social-networks {
-  height: 1em;
-  width: 1em;
+  height: 2em;
+  width: 2em;
+  top:0.8em;
+  right:0.2em;
   position: absolute;
   background-color: #fff;
-  align-self: end;
+  z-index:1;
+  display:flex;
+  flex-direction: column;
+  gap:.2em;
+  justify-content: center;
+  border-radius: 50px;
+  align-items: center;
+  padding:3px 3px;
+  cursor:pointer;
+  
+
 }
+.stick {
+  width: 22px;
+  height: 4px;
+  border-radius: 4px;  
+  background-color:  #000000;
+  position: relative;
+  
+  
+}
+.team-content .team-item .team-social-networks button{
+  width:100%;
+  height:100%;
+}
+
+
 
 /*************CONTACT STYLE*******************/
 
