@@ -1,0 +1,60 @@
+header {
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    left: 0; /* Posicionamos la cabecera al lado izquierdo */
+    position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+    top: 0; /* Posicionamos la cabecera pegada arriba */
+    text-transform: uppercase;
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5); /* 50% de opacidad */
+    height: 10vh;
+  }
+  
+  .header-icon {
+    padding-right: 100px; 
+  }
+  .header-icon img{
+    height:100%;
+    width:12em;
+  }
+  
+  nav .nav-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+  }
+  
+  nav .nav-list ul li {
+    color: #090707;
+  }
+  nav .nav-list ul li a {
+    color: #000000;
+    font-weight: bold;
+  }
+  nav .nav-list ul li a:hover{
+    color:#fff;
+    
+  }
+  .nav-button {
+    padding: 30px;
+    
+  }
+  .nav-button button {
+    background-color: rgba(0, 247, 41, 0.7);
+    border-radius: 30px;
+    border: none;
+    color: #121212;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.6em 0.6em;
+    cursor: pointer;
+  }
+  .nav-button button:hover {
+    background-color: #121212;
+    color: #fff;
+    transition:.6s ease-out;
+  }

@@ -1,0 +1,41 @@
+.slider {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    gap:1em;
+  }
+  .slider .slider-img {
+    position: absolute;
+    z-index: -1;
+  }
+  .slider .slider-img img {
+    width: 100%;
+  }
+  .slider-title {
+  }
+  .slider-text {
+  }
+  .slider-button{
+    
+  }
+  .slider-button button {
+    background-color: rgba(0, 247, 41, 0.7);
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    padding: 1em 1em;
+    height:95%;
+    cursor: pointer;
+    
+  }
+  .slider-button button:hover {
+    background-color: #949191;
+    color:#fff;
+    /*font-size:1.2em;*/
+    transition:.5s ease-out;
+    
+  }

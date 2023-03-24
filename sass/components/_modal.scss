@@ -1,0 +1,135 @@
+.modal-container {
+    box-shadow:0 0 62px rgba(0,0,0,.3);
+    display:none;
+    color:#000;
+    top:15%;
+    left:10%;
+    width:80%;
+    height:80vh;
+    border:none;
+    align-items:center;
+    border-radius:5px;
+    background-color:#fff;
+    z-index:9999;
+    position:fixed;
+  }
+  .modal-container.active {
+    display: flex;
+  }
+  .modal-slider{
+    width:60%;
+    height:100%;   
+  }
+  .modal-slider .modal-slider-image{
+    height:50%;
+  }
+  .modal-slider:hover{
+   
+  }
+  .modal-slider img{
+    width:100%;
+    height:100%;
+    cursor:pointer;
+  }
+  .modal-slider img:hover{
+    
+  }
+  .modal-content{
+    height:100%;
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    padding:0 2rem;
+    justify-content:center;
+    gap:2rem;
+    color:#000;
+  }
+  .modal-content .modal-title h4{
+    font-size:2.4rem;
+    margin:0;
+  }
+   .modal-content .modal-subtitle p{
+    opacity:.5;
+    margin:0;
+  }
+   .modal-content .prices {
+    display:flex;
+    gap:1rem;
+  }
+   .modal-content .prices .old-price {
+    text-decoration:line-through;
+  }
+   .modal-content .prices .old-price span {
+    color:red;
+    font-weight:600;
+  }
+  .modal-content .prices .new-price span{
+    font-weight:600;
+    font-size:1.8rem;
+    
+  }
+   .modal-content .prices .new-price:hover{
+    transform: scale(1.2);
+    transition:.3s ease-in-out;
+  }
+   .modal-content .prices .offert-price span{
+    background-color:rgba(0, 247, 41, 0.7);
+    font-weight:600;
+    font-size:1.8rem;
+    padding:0 .5rem;
+    border-radius:30px;
+  }
+  
+  .modal-close-button{
+    width:3rem;
+    height:3rem;
+    border-radius:30px;
+    align-self: flex-end;
+  }
+  .modal-close-button button{
+    width:100%;
+    height:100%;
+    border-radius:30px;
+    background-color: #000;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    
+  }
+  .modal-close-button button:hover{
+    background-color: #fff;
+    color:#000;
+    border:2px solid black;
+  }
+    
+  .divider{
+    width:100%;
+    height:1px;
+    background-color:grey;
+    opacity:.5;
+  }
+   .modal-content .modal-description-text p{
+    font-size:1.2rem;
+  }
+  .checkout{
+    text-align:center;
+  }
+  .checkout button{
+    font-size:1rem;
+    padding:1rem 1.5rem;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    width:50%;
+    font-weight:600;
+    text-transform:uppercase;
+    background-color:rgba(0, 247, 41, 0.7);
+    
+  }
+  .checkout button:hover{
+    color:#fff;
+   background-color:#121212;
+   transform: scale(1.3);
+   transition:.3s ease-in-out;
+  }
+  
