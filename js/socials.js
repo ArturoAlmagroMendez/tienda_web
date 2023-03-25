@@ -10,7 +10,7 @@ export default(() =>{
             showIcons(i, 350);
         });
         closeIcons[i].addEventListener('click' , () => {
-            showIcons(i, 50);
+            showIcons(i, 30);
         });
     }
     function showIcons(i, timeOut){

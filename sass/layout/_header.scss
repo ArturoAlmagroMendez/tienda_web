@@ -31,27 +31,32 @@ header {
     color: #090707;
   }
   nav .nav-list ul li a {
+    font-family: Anime;
     color: #000000;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.2rem;
+
   }
   nav .nav-list ul li a:hover{
-    color:#fff;
+    color:#b11818;
     
   }
   .nav-button {
-    padding: 30px;
+    padding: 2rem;
     
   }
   .nav-button button {
-    background-color: rgba(0, 247, 41, 0.7);
+    background-color: #b11818;
     border-radius: 30px;
     border: none;
     color: #121212;
-    font-size: 1em;
+    font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 0.6em 0.6em;
+    padding: 0.7rem 1.2rem;
     cursor: pointer;
+    text-align: center;
+    
   }
   .nav-button button:hover {
     background-color: #121212;
