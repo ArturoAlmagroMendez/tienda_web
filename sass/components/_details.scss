@@ -1,48 +1,53 @@
 .details {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    height: 100vh;
-    align-items: center;
-    gap: 2em;
-    margin: 0 auto;
-  }
-  .details .details-column {
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
-  }
-  .details .details-column .details-column-item {
-    display: flex;
-    gap: 10px;
-  }
-  .details .details-column .details-column-item .details-item-svg {
-    height: 48px;
-    width: 48px;
-  }
-  .details
-    .details-column
-    .details-column-item
-    .details-item-description
-    .details-item-description-title {
-    font-size: 1.4em;
-  }
-  .details
-    .details-column
-    .details-column-item
-    .details-item-description
-    .details-item-description-title {
-    font-weight: bold;
-    font-size: 1.8em;
-    margin-bottom:0.2em;
-  }
-  .details-column .details-image {
-    width: 400px;
-    height: 400px;
-  }
-  .details-column .details-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    
-  }
+  display: flex;
+  margin: 0 auto;
+  padding: 10% 0;
+  width: 80%;
+}
+.details .details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between; 
+  width:33%;
+}
+.details .details-column .details-column-item {
+  display: flex;
+  gap: 2rem;
+}
+.details .details-column .details-column-item .details-item-svg {
+  height: 3rem;
+  width: 3rem;
+}
+.details
+  .details-column
+  .details-column-item
+  .details-item-description
+  .details-item-description-title h5 {
+  font-size: 2rem;
+  margin:0;
+}
+.details
+  .details-column
+  .details-column-item
+  .details-item-description
+  .details-item-description-title h5{
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.details-column .details-image {
+  width:90%;
+  padding: 0 5%;
+}
+.details-column .details-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.details
+  .details-column
+  .details-column-item
+  .details-item-description
+  .details-item-description-text{
+      font-size:1.1rem;
+ }

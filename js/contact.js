@@ -3,6 +3,6 @@ export default (() => {
 
     formButton.addEventListener('click' , () =>{
         console.log("boton de formulario");
-    })();
+    });
 
 })();

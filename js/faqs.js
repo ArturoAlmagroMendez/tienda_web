@@ -3,10 +3,23 @@ export default (() => {
     const invisibleItems = document.querySelectorAll('.faqs-item .answer');
     
     dropDownItems.forEach(dropDownItem => dropDownItem.addEventListener('click' , () =>{
-        let dropDownParent = dropDownItem.parentElement;
-        let answer = dropDownParent.parentElement;
-        let invisibleItem = answer.querySelector('.answer');
-        invisibleItem.classList.toggle('.active');
+        
+        let dropDownParent = dropDownItem.closest('.faqs-item');
+        let invisibleItem = dropDownParent.querySelector('.answer');
+        let activeItem = dropDownParent.querySelector('.answer.active');
+        
+        if(activeItem && activeItem !== invisibleItem) {
+            activeItem.classList.toggle('active');
+        }
+        
+        if (!invisibleItem.classList.contains('active')) {
+            invisibleItem.classList.add('active');
+            setTimeout(() => invisibleItem.classList.add('fade-in'), 50);
+        } else {
+            invisibleItem.classList.remove('fade-in');
+            setTimeout(() => invisibleItem.classList.remove('active'), 400);
+        }
+        
         console.log("clicando faq desplegable");
     }));
 })();

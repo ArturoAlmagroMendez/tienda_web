@@ -48,14 +48,15 @@
     border:none;
     background-color:hsla(0, 0%, 100%, 0.78);
     border-radius:10px;
-    padding:1.5rem;
+    padding:5% 0;
     box-shadow:0 0 62px rgba(0,0,0,.3);
     cursor:pointer;
     gap:1rem;
+    transition:.3s ease-in-out;
 }
 .featured .featured-content .featured-item:hover{
     transform: scale(1.1);
-    transition:.3s ease-in-out;
+    
 }
 
 .featured .featured-content .featured-item:nth-child(n + 2)::before {
