@@ -113,8 +113,11 @@
     padding-top:6rem;
 }
 .featured .featured-content .featured-item .featured-item-image {
-    height: 100px;
-    width: 100px;
+    width: 16rem;
+    height: 16rem;
+}
+.featured .featured-content .featured-item .featured-item-image svg{
+    width:100%;
 }
 .featured .featured-content .featured-item .featured-item-title {
     font-weight: 600;

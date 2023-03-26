@@ -49,8 +49,5 @@ export default (() => {
             }
         }
     
-        if (!myButton.classList.contains('active') && contact.classList.contains('active')) {
-            myButton.classList.add('active');
-        }
     });
 })();
