@@ -38,11 +38,15 @@ nav .nav-list ul li a {
 }
 
 nav .nav-list ul li a:hover {
-  color: #b11818;
+  color: var(--color-slider);
+}
+
+nav .nav-list ul li a.active.slider-color {
+  color: var(--color-slider);
 }
 
 nav .nav-list ul li a.featured-header-links:hover {
-  color: #f3e221;
+  color: var(--color-featured);
 }
 
 nav .nav-list ul li a.active.featured-color {
@@ -65,6 +69,50 @@ nav .nav-list ul li a.active.contact-color {
   color: var(--color-contact);
 }
 
+nav .nav-list ul li a.slider-header-links:hover {
+  color: var(--color-slider);
+}
+
+nav .nav-list ul li a.featured-color:hover {
+  color: var(--color-featured);
+}
+
+nav .nav-list ul li a.details-color:hover {
+  color: var(--color-details);
+}
+
+nav .nav-list ul li a.team-color:hover {
+  color: var(--color-team);
+}
+
+nav .nav-list ul li a.faqs-color:hover {
+  color: var(--color-faqs);
+}
+
+nav .nav-list ul li a.contact-color:hover {
+  color: var(--color-contact);
+}
+
+.nav-button button.featured-color {
+  background-color: var(--color-featured);
+}
+
+.nav-button button.details-color {
+  background-color: var(--color-details);
+}
+
+.nav-button button.team-color {
+  background-color: var(--color-team);
+}
+
+.nav-button button.faqs-color {
+  background-color: var(--color-faqs);
+}
+
+.nav-button button.contact-color {
+  background-color: var(--color-contact);
+}
+
 .nav-button {
   padding: 2rem;
 }
@@ -81,22 +129,6 @@ nav .nav-list ul li a.active.contact-color {
   cursor: pointer;
   text-align: center;
   transition: 0.6s ease-out;
-}
-
-.nav-button button.featured-color {
-  background-color: #f3e221;
-}
-
-.nav-button button.details-color {
-  background-color: #28f321;
-}
-
-.nav-button button.team-color {
-  background-color: #2f21f3;
-}
-
-.nav-button button.faqs-color {
-  background-color: #f321c6;
 }
 
 .nav-button button:hover {
@@ -122,8 +154,9 @@ nav .nav-list ul li a.active.contact-color {
 }
 
 :root {
+  --color-slider:#b11818;
   --color-featured: #f3e221;
-  --color-details: #00ff00;
+  --color-details: #fff;
   --color-team: #0000ff;
   --color-faqs: #ff00ff;
   --color-contact: #00ffff;
@@ -478,26 +511,48 @@ nav .nav-list ul li a.active.contact-color {
 .details {
   display: flex;
   margin: 0 auto;
-  padding: 10% 0;
-  width: 80%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+}
+
+.details .details-background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.details .details-background-image img {
+  height: 100%;
+  width: 100%;
 }
 
 .details .details-column {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  justify-content: space-between;
+  gap: 3rem;
+  justify-content: center;
   width: 33%;
 }
 
 .details .details-column .details-column-item {
   display: flex;
   gap: 2rem;
+  position: relative;
+  z-index: 1;
+  padding: 0 10%;
 }
 
 .details .details-column .details-column-item .details-item-svg {
-  height: 3rem;
-  width: 3rem;
+  height: 8rem;
+  width: 8em;
+}
+
+.details .details-column .details-column-item .details-item-svg svg {
+  height: 100%;
+  width: 100%;
 }
 
 .details .details-column .details-column-item .details-item-description .details-item-description-title h5 {
@@ -512,13 +567,13 @@ nav .nav-list ul li a.active.contact-color {
 
 .details-column .details-image {
   width: 90%;
-  padding: 0 5%;
 }
 
 .details-column .details-image img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  position: relative;
+  z-index: 0;
 }
 
 .details .details-column .details-column-item .details-item-description .details-item-description-text {
@@ -747,6 +802,7 @@ nav .nav-list ul li a.active.contact-color {
   justify-content: center;
   position: relative;
   width: 100%;
+  height: 90vh;
 }
 
 .contact .contact-map {

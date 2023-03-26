@@ -36,11 +36,15 @@ header {
 
   }
   nav .nav-list ul li a:hover{
-    color:#b11818;
+    color:var(--color-slider);
   }
   
+  
+  nav .nav-list ul li a.active.slider-color{
+    color: var(--color-slider);
+  }
   nav .nav-list ul li a.featured-header-links:hover{
-    color:#f3e221; 
+    color:var(--color-featured); 
   }
   nav .nav-list ul li a.active.featured-color{
     color: var(--color-featured);
@@ -57,6 +61,42 @@ header {
   nav .nav-list ul li a.active.contact-color{
     color: var(--color-contact);
   }
+  nav .nav-list ul li a.slider-header-links:hover{
+    color:var(--color-slider); 
+  }
+  nav .nav-list ul li a.featured-color:hover{
+    color: var(--color-featured);
+  }
+  nav .nav-list ul li a.details-color:hover{
+    color: var(--color-details);
+  }
+  nav .nav-list ul li a.team-color:hover{
+    color: var(--color-team);
+  }
+  nav .nav-list ul li a.faqs-color:hover{
+    color: var(--color-faqs);
+  }
+  nav .nav-list ul li a.contact-color:hover{
+    color: var(--color-contact);
+  }
+ 
+  .nav-button button.featured-color{
+    background-color: var(--color-featured);
+  }
+  .nav-button button.details-color{
+    background-color:var(--color-details);
+  }
+  .nav-button button.team-color{
+    background-color: var(--color-team);
+  }
+  .nav-button button.faqs-color{
+    background-color: var(--color-faqs);
+  }
+  .nav-button button.contact-color{
+    background-color: var(--color-contact);;
+  }
+  
+  
   .nav-button {
     padding: 2rem;
     
@@ -75,20 +115,6 @@ header {
     transition:.6s ease-out;
     
   }
-  .nav-button button.featured-color{
-    background-color: #f3e221;
-  }
-  .nav-button button.details-color{
-    background-color: #28f321;
-  }
-  .nav-button button.team-color{
-    background-color: #2f21f3;
-  }
-  .nav-button button.faqs-color{
-    background-color: #f321c6;
-  }
-  
-
   .nav-button button:hover {
     background-color: #121212;
     color: #fff;
