@@ -1,44 +1,89 @@
 .featured {
-    align-items: center;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 100vh;
+    align-items: center; 
+    height: 90vh;
     display: flex;
     flex-direction: column;
     height: 100vh;
     justify-content: center;
-    width: 100%;
+    width: 80%;
+    padding: 0 10%;
+    z-index: 1001;
+    position: relative;
+    z-index: 0;
 }
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+.featured .featured-items{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
 }
+.featured .featured-background-image{
+    
+    position:absolute;
+    background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+}
+.featured
 .featured-title h2{
     font-size:5rem;
+    font-family: Anime;
+    color:transparent;
+    -webkit-text-stroke: 2px black; 
     margin:0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
+.featured-title h2.fade-in-text{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+.featured
+.featured-title h2.animate{
+    animation: change-color 1s forwards;
+    color:#f3e221;
+}
+@keyframes change-color {
+    from {
+      color: transparent;
+    }
+    to {
+      color: #f3e221;
+      border:none;
+      
+    }
+  }
 .featured-subtitle p{
-    font-size:1.4rem;
+    font-size:1.8rem;
     font-weight:600;
+    font-family: Anime;
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.featured-subtitle p.fade-in-text{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.featured-subtitle p.animate{
+    animation: change-color 1s forwards;
+    color:#f3e221;
 }
 .featured-subtitle{
     margin-bottom:5rem;
 }
 .featured .featured-content {
     display: flex;
-    width: 80%;
+    width: 100%;
     text-align: center;
     justify-content: space-evenly;
     gap:4rem;
     color:#000;
+    
 }
 .featured .featured-content .featured-item {
     align-items: center;

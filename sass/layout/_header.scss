@@ -1,23 +1,21 @@
 header {
     display: flex;
-    font-size: 16px;
-    justify-content: center;
+    font-size: 1rem;
+    justify-content: space-around;
     left: 0; /* Posicionamos la cabecera al lado izquierdo */
     position: fixed; /* Hacemos que la cabecera tenga una posición fija */
     top: 0; /* Posicionamos la cabecera pegada arriba */
     text-transform: uppercase;
-    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    width: 60%; /* hacemos que la cabecera ocupe el ancho completo de la página */
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5); /* 50% de opacidad */
     height: 10vh;
+    z-index: 1001;
+    padding:.4rem 20%;
   }
   
-  .header-icon {
-    padding-right: 100px; 
-  }
-  .header-icon img{
-    height:100%;
-    width:12em;
+  .header-icon svg.featured-header-icon{
+    animation: change-color-logo 1s forwards;
   }
   
   nav .nav-list ul {
@@ -39,6 +37,12 @@ header {
   }
   nav .nav-list ul li a:hover{
     color:#b11818;
+  }
+  
+  nav .nav-list ul li a.featured-header-links:hover{
+    color:#f3e221; 
+  }
+  nav .nav-list ul li.active{
     
   }
   .nav-button {
@@ -56,10 +60,43 @@ header {
     padding: 0.7rem 1.2rem;
     cursor: pointer;
     text-align: center;
+    transition:.6s ease-out;
     
   }
+  .nav-button button.featured-color{
+    background-color: #f3e221;
+  }
+  .nav-button button.details-color{
+    background-color: #28f321;
+  }
+  .nav-button button.team-color{
+    background-color: #2f21f3;
+  }
+  .nav-button button.faqs-color{
+    background-color: #f321c6;
+  }
+  
+
   .nav-button button:hover {
     background-color: #121212;
     color: #fff;
-    transition:.6s ease-out;
   }
+  
+  .nav-button button.featured-header-button{
+    animation: change-color-header 1s forwards;
+  }
+
+  @keyframes change-color-header {
+    from {
+      background-color: #b11818;
+    }
+    to {
+      background-color: #f3e221;
+    }
+  }
+ 
+  .nav-button button.featured-header-button:hover{
+    background-color: #121212;
+    color:#fff;
+  }
+ 

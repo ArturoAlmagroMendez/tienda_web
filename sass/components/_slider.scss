@@ -6,11 +6,20 @@
     justify-content:center;
     text-align: center;
     width: 100%;
-    gap:8rem;
+    height: 100vh;
+    gap:4rem;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
   }
   .slider .slider-img {
-    position: absolute;
-    z-index: -1;
+    position:absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index:-1;
+    height: 100%;
+    width: 100%;
   }
   .slider .slider-img img {
     width: 100%;
@@ -18,16 +27,19 @@
   .slider-title h1 {
     font-family: Anime;
     color:#b11818;
+     font-size: 5rem;
   }
+ 
   .slider-text p {
     font-family: Anime;
     color:#b11818;
+    font-size: 2rem;
   }
   .slider-button{
     width:15%;
   }
   .slider-button button {
-    background-color: rgb(0, 225, 255);
+    background-color: rgb(84, 226, 245);
     border-radius: 30px;
     border: none;
     font-weight: bold;

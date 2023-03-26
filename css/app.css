@@ -1,25 +1,22 @@
 @charset "UTF-8";
 header {
   display: flex;
-  font-size: 16px;
-  justify-content: center;
+  font-size: 1rem;
+  justify-content: space-around;
   left: 0; /* Posicionamos la cabecera al lado izquierdo */
   position: fixed; /* Hacemos que la cabecera tenga una posición fija */
   top: 0; /* Posicionamos la cabecera pegada arriba */
   text-transform: uppercase;
-  width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+  width: 60%; /* hacemos que la cabecera ocupe el ancho completo de la página */
   align-items: center;
   background-color: rgba(255, 255, 255, 0.5); /* 50% de opacidad */
   height: 10vh;
+  z-index: 1001;
+  padding: 0.4rem 20%;
 }
 
-.header-icon {
-  padding-right: 100px;
-}
-
-.header-icon img {
-  height: 100%;
-  width: 12em;
+.header-icon svg.featured-header-icon {
+  animation: change-color-logo 1s forwards;
 }
 
 nav .nav-list ul {
@@ -44,6 +41,10 @@ nav .nav-list ul li a:hover {
   color: #b11818;
 }
 
+nav .nav-list ul li a.featured-header-links:hover {
+  color: #f3e221;
+}
+
 .nav-button {
   padding: 2rem;
 }
@@ -59,12 +60,45 @@ nav .nav-list ul li a:hover {
   padding: 0.7rem 1.2rem;
   cursor: pointer;
   text-align: center;
+  transition: 0.6s ease-out;
+}
+
+.nav-button button.featured-color {
+  background-color: #f3e221;
+}
+
+.nav-button button.details-color {
+  background-color: #28f321;
+}
+
+.nav-button button.team-color {
+  background-color: #2f21f3;
+}
+
+.nav-button button.faqs-color {
+  background-color: #f321c6;
 }
 
 .nav-button button:hover {
   background-color: #121212;
   color: #fff;
-  transition: 0.6s ease-out;
+}
+
+.nav-button button.featured-header-button {
+  animation: change-color-header 1s forwards;
+}
+
+@keyframes change-color-header {
+  from {
+    background-color: #b11818;
+  }
+  to {
+    background-color: #f3e221;
+  }
+}
+.nav-button button.featured-header-button:hover {
+  background-color: #121212;
+  color: #fff;
 }
 
 .slider {
@@ -75,12 +109,21 @@ nav .nav-list ul li a:hover {
   justify-content: center;
   text-align: center;
   width: 100%;
-  gap: 8rem;
+  height: 100vh;
+  gap: 4rem;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
 }
 
 .slider .slider-img {
   position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   z-index: -1;
+  height: 100%;
+  width: 100%;
 }
 
 .slider .slider-img img {
@@ -90,11 +133,13 @@ nav .nav-list ul li a:hover {
 .slider-title h1 {
   font-family: Anime;
   color: #b11818;
+  font-size: 5rem;
 }
 
 .slider-text p {
   font-family: Anime;
   color: #b11818;
+  font-size: 2rem;
 }
 
 .slider-button {
@@ -102,7 +147,7 @@ nav .nav-list ul li a:hover {
 }
 
 .slider-button button {
-  background-color: rgb(0, 225, 255);
+  background-color: rgb(84, 226, 245);
   border-radius: 30px;
   border: none;
   font-weight: bold;
@@ -266,36 +311,80 @@ nav .nav-list ul li a:hover {
 
 .featured {
   align-items: center;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  width: 100%;
+  width: 80%;
+  padding: 0 10%;
+  z-index: 1001;
+  position: relative;
+  z-index: 0;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.featured .featured-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
-.featured-title h2 {
+
+.featured .featured-background-image {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+}
+
+.featured .featured-title h2 {
   font-size: 5rem;
+  font-family: Anime;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
   margin: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
+.featured-title h2.fade-in-text {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.featured .featured-title h2.animate {
+  animation: change-color 1s forwards;
+  color: #f3e221;
+}
+
+@keyframes change-color {
+  from {
+    color: transparent;
+  }
+  to {
+    color: #f3e221;
+    border: none;
+  }
+}
 .featured-subtitle p {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 600;
+  font-family: Anime;
+  -webkit-text-stroke: 2px black;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.featured-subtitle p.fade-in-text {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.featured-subtitle p.animate {
+  animation: change-color 1s forwards;
+  color: #f3e221;
 }
 
 .featured-subtitle {
@@ -304,7 +393,7 @@ nav .nav-list ul li a:hover {
 
 .featured .featured-content {
   display: flex;
-  width: 80%;
+  width: 100%;
   text-align: center;
   justify-content: space-evenly;
   gap: 4rem;
