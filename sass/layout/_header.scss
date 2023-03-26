@@ -42,19 +42,19 @@ header {
   nav .nav-list ul li a.featured-header-links:hover{
     color:#f3e221; 
   }
-  nav .nav-list ul li.active.featured-color{
+  nav .nav-list ul li a.active.featured-color{
     color: var(--color-featured);
   }
-  nav .nav-list ul li.active.details-color{
+  nav .nav-list ul li a.active.details-color{
     color: var(--color-details);
   }
-  nav .nav-list ul li.active.team-color{
+  nav .nav-list ul li a.active.team-color{
     color: var(--color-team);
   }
-  nav .nav-list ul li.active.faqs-color{
+  nav .nav-list ul li a.active.faqs-color{
     color: var(--color-faqs);
   }
-  nav .nav-list ul li.active.contact-color{
+  nav .nav-list ul li a.active.contact-color{
     color: var(--color-contact);
   }
   .nav-button {

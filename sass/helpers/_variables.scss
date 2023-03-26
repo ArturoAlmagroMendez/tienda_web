@@ -1,5 +1,13 @@
-$featured-color: #f3e221;
-$details-color: #00AEEF;
-$team-color: #8CC63F;
-$faqs-color: #DA1884;
-$contact-color: #6F2CAC;
+$color-featured: var(--color-featured);
+$color-details: var(--color-details);
+$color-team: var(--color-team);
+$color-faqs: var(--color-faqs);
+$color-contact: var(--color-contact);
+
+:root {
+    --color-featured: #f3e221;
+    --color-details: #00ff00;
+    --color-team: #0000ff;
+    --color-faqs: #ff00ff;
+    --color-contact: #00ffff;
+  }

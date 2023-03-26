@@ -93,7 +93,7 @@
     border:none;
     background-color:hsla(0, 0%, 100%, 0.78);
     border-radius:10px;
-    padding:5% 0;
+    padding:1rem 0;
     box-shadow:0 0 62px rgba(0,0,0,.3);
     cursor:pointer;
     gap:1rem;
@@ -113,11 +113,12 @@
     padding-top:6rem;
 }
 .featured .featured-content .featured-item .featured-item-image {
-    width: 16rem;
-    height: 16rem;
+    width: 50%;
+    height: 50%;
 }
 .featured .featured-content .featured-item .featured-item-image svg{
     width:100%;
+    height:100%;
 }
 .featured .featured-content .featured-item .featured-item-title {
     font-weight: 600;
