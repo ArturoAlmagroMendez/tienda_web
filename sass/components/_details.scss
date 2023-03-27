@@ -1,48 +1,73 @@
 .details {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    height: 100vh;
-    align-items: center;
-    gap: 2em;
-    margin: 0 auto;
-  }
-  .details .details-column {
-    display: flex;
-    flex-direction: column;
-    gap: 4em;
-  }
-  .details .details-column .details-column-item {
-    display: flex;
-    gap: 10px;
-  }
-  .details .details-column .details-column-item .details-item-svg {
-    height: 48px;
-    width: 48px;
-  }
-  .details
-    .details-column
-    .details-column-item
-    .details-item-description
-    .details-item-description-title {
-    font-size: 1.4em;
-  }
-  .details
-    .details-column
-    .details-column-item
-    .details-item-description
-    .details-item-description-title {
-    font-weight: bold;
-    font-size: 1.8em;
-    margin-bottom:0.2em;
-  }
-  .details-column .details-image {
-    width: 400px;
-    height: 400px;
-  }
-  .details-column .details-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    
-  }
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  height:100vh;
+  position: relative;
+  justify-content: center;
+}
+.details .details-background-image{
+  width:100%;
+  height:100%;
+  position: absolute;
+  z-index:-1;
+}
+.details .details-background-image img{
+  height:100%;
+  width: 100%;
+}
+.details .details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center; 
+  width:33%;
+}
+.details .details-column .details-column-item {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  padding: 0 10%;
+}
+.details .details-column .details-column-item .details-item-svg {
+  height: 8rem;
+  width: 8em;
+  
+}
+.details .details-column .details-column-item .details-item-svg svg{
+  height: 100%;
+  width: 100%;
+}
+.details
+  .details-column
+  .details-column-item
+  .details-item-description
+  .details-item-description-title h5 {
+  font-size: 2rem;
+  margin:0;
+}
+.details
+  .details-column
+  .details-column-item
+  .details-item-description
+  .details-item-description-title h5{
+  font-weight: bold;
+  font-size: 2rem;
+}
+.details-column .details-image {
+  width:90%;
+}
+.details-column .details-image img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+.details
+  .details-column
+  .details-column-item
+  .details-item-description
+  .details-item-description-text{
+      font-size:1.1rem;
+ }

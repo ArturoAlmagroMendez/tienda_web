@@ -2,11 +2,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
 }
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #121212;
+  font-family: "Anime";
+  background-color: #009688;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -16,13 +16,17 @@ body {
 main {
   width: 100%;
 }
+@font-face {
+  font-family: Anime;
+  src: url(/ninja-naruto-font/NinjaNaruto-YOn4.ttf);
+}
 h1,
 h2,
 h3,
 h4,
 a,
 p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins','sans serif';
 }
 
 h1 {
