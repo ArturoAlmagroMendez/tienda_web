@@ -7,7 +7,7 @@ header {
   position: fixed; /* Hacemos que la cabecera tenga una posición fija */
   top: 0; /* Posicionamos la cabecera pegada arriba */
   text-transform: uppercase;
-  width: 60%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+  width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
   align-items: center;
   background-color: rgba(255, 255, 255, 0.5); /* 50% de opacidad */
   height: 10vh;
@@ -34,7 +34,7 @@ nav .nav-list ul li a {
   font-family: Anime;
   color: #000000;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 nav .nav-list ul li a:hover {
@@ -155,7 +155,7 @@ nav .nav-list ul li a.contact-color:hover {
 
 :root {
   --color-slider:#b11818;
-  --color-featured: #f3e221;
+  --color-featured: #8ada2f;
   --color-details: #fff;
   --color-team: #0000ff;
   --color-faqs: #ff00ff;
@@ -227,7 +227,7 @@ nav .nav-list ul li a.contact-color:hover {
 
 .modal-container {
   box-shadow: 0 0 62px rgba(0, 0, 0, 0.3);
-  display: none;
+  display: flex;
   color: #000;
   top: 15%;
   left: 10%;
@@ -237,12 +237,15 @@ nav .nav-list ul li a.contact-color:hover {
   align-items: center;
   border-radius: 5px;
   background-color: #fff;
-  z-index: 9999;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s linear;
   position: fixed;
 }
 
 .modal-container.active {
-  display: flex;
+  z-index: 9999;
+  opacity: 1;
 }
 
 .modal-slider {
@@ -372,12 +375,12 @@ nav .nav-list ul li a.contact-color:hover {
 
 .featured {
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   padding: 0 10%;
   z-index: 1001;
   position: relative;
@@ -393,10 +396,14 @@ nav .nav-list ul li a.contact-color:hover {
 
 .featured .featured-background-image {
   position: absolute;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -2;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.featured .featured-background-image img {
+  width: 100%;
+  height: 100%;
 }
 
 .featured .featured-title h2 {
@@ -416,7 +423,7 @@ nav .nav-list ul li a.contact-color:hover {
 
 .featured .featured-title h2.animate {
   animation: change-color 1s forwards;
-  color: #f3e221;
+  color: var(--color-featured);
 }
 
 @keyframes change-color {
@@ -424,7 +431,7 @@ nav .nav-list ul li a.contact-color:hover {
     color: transparent;
   }
   to {
-    color: #f3e221;
+    color: var(--color-featured);
     border: none;
   }
 }
@@ -445,7 +452,6 @@ nav .nav-list ul li a.contact-color:hover {
 
 .featured-subtitle p.animate {
   animation: change-color 1s forwards;
-  color: #f3e221;
 }
 
 .featured-subtitle {
@@ -472,7 +478,7 @@ nav .nav-list ul li a.contact-color:hover {
   padding: 1rem 0;
   box-shadow: 0 0 62px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  gap: 1rem;
+  gap: 2rem;
   transition: 0.3s ease-in-out;
 }
 
@@ -495,8 +501,8 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 .featured .featured-content .featured-item .featured-item-image svg {
-  width: 100%;
-  height: 100%;
+  width: 12rem;
+  height: 12rem;
 }
 
 .featured .featured-content .featured-item .featured-item-title {
@@ -515,6 +521,8 @@ nav .nav-list ul li a.contact-color:hover {
   height: 100vh;
   position: relative;
   justify-content: center;
+  align-items: center;
+  padding: 0 10%;
 }
 
 .details .details-background-image {
@@ -534,15 +542,15 @@ nav .nav-list ul li a.contact-color:hover {
   flex-direction: column;
   gap: 3rem;
   justify-content: center;
-  width: 33%;
+  width: 50%;
+  position: relative;
 }
 
 .details .details-column .details-column-item {
   display: flex;
   gap: 2rem;
-  position: relative;
   z-index: 1;
-  padding: 0 10%;
+  width: 100%;
 }
 
 .details .details-column .details-column-item .details-item-svg {
@@ -555,9 +563,21 @@ nav .nav-list ul li a.contact-color:hover {
   width: 100%;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .details .details-column .details-column-item .details-item-description .details-item-description-title h5 {
   font-size: 2rem;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .details .details-column .details-column-item .details-item-description .details-item-description-title h5 {
@@ -565,15 +585,15 @@ nav .nav-list ul li a.contact-color:hover {
   font-size: 2rem;
 }
 
-.details-column .details-image {
+.details-column-image .details-image {
   width: 90%;
 }
 
-.details-column .details-image img {
+.details-column-image .details-image img {
   width: 100%;
   height: 100%;
-  position: relative;
   z-index: 0;
+  animation: float 2s ease-in-out infinite;
 }
 
 .details .details-column .details-column-item .details-item-description .details-item-description-text {
@@ -624,8 +644,8 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 .team-content .team-item .team-social-networks {
-  height: 2.4em;
-  width: 2.4em;
+  height: 2.3rem;
+  width: 2.3rem;
   top: 5%;
   left: 85%;
   background-color: hsl(0, 0%, 100%);
@@ -634,12 +654,12 @@ nav .nav-list ul li a.contact-color:hover {
   gap: 0.2em;
   border-radius: 50px;
   cursor: pointer;
-  transition: 0.3s linear;
+  transition: 1s linear;
   align-items: center;
 }
 
 .team-content .team-item .team-social-networks.active {
-  height: 80%;
+  height: max-content;
 }
 
 .team-content .team-item .team-social-networks .social-networks.inactive {
@@ -647,8 +667,7 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 .team-content .team-item .team-social-networks .social-networks-icons ul li {
-  height: 2rem;
-  width: 2rem;
+  width: 70%;
 }
 
 .team-content .team-item .team-social-networks .social-networks-icons ul li svg {
@@ -679,6 +698,7 @@ nav .nav-list ul li a.contact-color:hover {
 
 .team-content .team-item .team-item-title {
   font-size: 1.8em;
+  font-family: "Poppins", sans-serif;
 }
 
 .team-content .team-item .team-item-text-subtitle {
@@ -695,8 +715,8 @@ nav .nav-list ul li a.contact-color:hover {
   flex-direction: column;
   padding: 10%;
   text-align: start;
-  width: 80%;
-  height: 70vh;
+  width: 100%;
+  height: 90vh;
   background-color: #fff;
 }
 

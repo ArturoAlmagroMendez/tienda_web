@@ -20,12 +20,12 @@ export default (() => {
     };
     
     const thresholds = [
-    {section: slider, threshold: 0},
-    {section: featured, threshold: slider.offsetHeight},
-    {section: details, threshold: slider.offsetHeight + featured.offsetHeight},
-    {section: team, threshold: slider.offsetHeight + featured.offsetHeight + details.offsetHeight},
-    {section: faqs, threshold: slider.offsetHeight + featured.offsetHeight + details.offsetHeight + team.offsetHeight},
-    {section: contact, threshold: slider.offsetHeight + featured.offsetHeight + details.offsetHeight + team.offsetHeight + faqs.offsetHeight},
+        {section: slider, threshold: 0},
+        {section: featured, threshold: slider.offsetHeight},
+        {section: details, threshold: slider.offsetHeight + featured.offsetHeight},
+        {section: team, threshold: slider.offsetHeight + featured.offsetHeight + details.offsetHeight},
+        {section: faqs, threshold: slider.offsetHeight + featured.offsetHeight + details.offsetHeight + team.offsetHeight},
+        {section: contact, threshold: slider.offsetHeight + featured.offsetHeight + details.offsetHeight + team.offsetHeight + faqs.offsetHeight},
     ];
 
 

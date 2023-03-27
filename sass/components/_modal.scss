@@ -1,6 +1,6 @@
 .modal-container {
     box-shadow:0 0 62px rgba(0,0,0,.3);
-    display:none;
+    display:flex;
     color:#000;
     top:15%;
     left:10%;
@@ -10,11 +10,14 @@
     align-items:center;
     border-radius:5px;
     background-color:#fff;
-    z-index:9999;
+    z-index: -1;
+    opacity: 0;
+    transition: .5s linear;
     position:fixed;
   }
   .modal-container.active {
-    display: flex;
+    z-index: 9999;
+    opacity: 1;
   }
   .modal-slider{
     width:60%;

@@ -37,8 +37,8 @@
     border-radius:5px;
 }
   .team-content .team-item .team-social-networks {
-    height: 2.4em;
-    width: 2.4em;
+    height: 2.3rem;
+    width: 2.3rem;
     top:5%;
     left:85%;
     background-color: hsl(0, 0%, 100%);
@@ -47,21 +47,18 @@
     gap:.2em;
     border-radius: 50px;
     cursor:pointer;
-    transition: .3s linear;
+    transition: 1s linear;
     align-items: center;
   }
-  .team-content .team-item .team-social-networks.active svg {
-    
-  }
+
   .team-content .team-item .team-social-networks.active{
-    height:80%;
+    height:max-content;
   } 
   .team-content .team-item .team-social-networks .social-networks.inactive{
     display:none;
   }
   .team-content .team-item .team-social-networks .social-networks-icons ul li{
-    height:2rem;
-    width:2rem;
+    width:70%;
   }
   .team-content .team-item .team-social-networks .social-networks-icons ul li svg{
     transition: .3s linear;
@@ -87,6 +84,7 @@
  
   .team-content .team-item .team-item-title{
     font-size: 1.8em;
+    font-family: 'Poppins', sans-serif;
   }
   .team-content .team-item .team-item-text-subtitle{
     font-size: 0.8em;

@@ -3,11 +3,11 @@ export default(() =>{
     const modalContainer = document.querySelector('.modal-container');
     const closeButton = document.querySelector('#close-button');
     modalOpenButton.addEventListener('click', () => {
-        modalContainer.style.display = 'flex';
+        modalContainer.classList.add('active');
         console.log('abriendo modal');
     });
     closeButton.addEventListener('click', () => {
-        modalContainer.style.display = 'none';
+        modalContainer.classList.remove('active');
         console.log('cerrando modal');
     });
 })();

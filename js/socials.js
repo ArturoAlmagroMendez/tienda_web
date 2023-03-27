@@ -3,35 +3,22 @@ export default(() =>{
     let closeIcons = document.querySelectorAll('.social-networks.inactive');
     const socialMenuItems = document.querySelectorAll('.team-social-networks');
     const socialNetworkIcons = document.querySelectorAll('.social-networks-icons');
-    let timeOut;
 
     for(let i = 0; i < OpenIcons.length; i++){
         OpenIcons[i].addEventListener('click' , () => {
-            showIcons(i, 350);
+            toggleIcons(i);
         });
         closeIcons[i].addEventListener('click' , () => {
-            showIcons(i, 30);
+            toggleIcons(i);
         });
     }
-    function showIcons(i, timeOut){
+    //Como se está utilizando toggle no hace falta utilizar una función para esconder los iconos,se puede reutilizar la misma función.
+    function toggleIcons(i){
         socialMenuItems[i].classList.toggle('active');
         OpenIcons[i].classList.toggle('active');
         OpenIcons[i].classList.toggle('inactive');
         closeIcons[i].classList.toggle('inactive');
         closeIcons[i].classList.toggle('active');
-        setTimeout(() => {
-            socialNetworkIcons[i].classList.toggle('active');
-        }, timeOut);
+        socialNetworkIcons[i].classList.toggle('active');
     }
-    function hideIcons(i){
-        socialMenuItems[i].classList.toggle('active');
-        OpenIcons[i].classList.toggle('active');
-        OpenIcons[i].classList.toggle('inactive');
-        closeIcons[i].classList.toggle('inactive');
-        closeIcons[i].classList.toggle('active');
-        socialNetworkIcons[i].classList.toggle('active'); 
-    }
-
-    
-
 })();

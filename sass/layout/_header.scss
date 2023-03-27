@@ -6,7 +6,7 @@ header {
     position: fixed; /* Hacemos que la cabecera tenga una posición fija */
     top: 0; /* Posicionamos la cabecera pegada arriba */
     text-transform: uppercase;
-    width: 60%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5); /* 50% de opacidad */
     height: 10vh;
@@ -32,7 +32,7 @@ header {
     font-family: Anime;
     color: #000000;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 
   }
   nav .nav-list ul li a:hover{
