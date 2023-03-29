@@ -265,20 +265,126 @@ nav .nav-list ul li a.contact-color:hover {
   opacity: 0;
   transition: 0.5s linear;
   position: fixed;
+  overflow: hidden;
+}
+
+.modal-content-front {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.modal-content.active {
+  transform: translateX(0%);
+}
+
+.modal-content-hidden {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-form {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-content-hidden form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+form .modal-form-input {
+  width: 100%;
+  height: 3rem;
+}
+
+form .modal-form-input input {
+  height: 100%;
+}
+
+form .modal-form-name-surname {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  height: 3rem;
+}
+
+form .modal-form-name-surname input {
+  width: 50%;
+}
+
+form .modal-form-location {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  height: 3rem;
+}
+
+form .modal-form-location input {
+  width: 50%;
+}
+
+form .modal-form-input input,
+form .modal-form-input select {
+  width: 100%;
+}
+
+.modal-content-hidden form input,
+.modal-content-hidden form button,
+.modal-form-input {
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-content-hidden form .modal-form-button {
+  width: 100%;
+  height: 4.5rem;
+}
+
+.modal-content-hidden form .modal-form-button button {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: #0084ff;
+  color: #fff;
+  font-weight: 600;
 }
 
 .modal-container.active {
-  z-index: 9999;
+  z-index: 2000;
   opacity: 1;
 }
 
 .modal-slider {
-  width: 60%;
+  width: 50%;
   height: 100%;
+  z-index: 9999;
 }
 
 .modal-slider .modal-slider-image {
-  height: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.modal-slider .modal-slider-image .swiper-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-slider .modal-slider-image .swiper-wrapper .swiper-slide {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-slider .modal-slider-image .swiper-wrapper .swiper-slide img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .modal-slider img {
@@ -289,13 +395,16 @@ nav .nav-list ul li a.contact-color:hover {
 
 .modal-content {
   height: 100%;
-  width: 40%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   padding: 0 2rem;
   justify-content: center;
   gap: 2rem;
   color: #000;
+  z-index: 1000;
+  position: absolute;
+  transform: translateX(50%);
+  transition: 1s linear;
 }
 
 .modal-content .modal-title h4 {
@@ -322,6 +431,10 @@ nav .nav-list ul li a.contact-color:hover {
   font-weight: 600;
 }
 
+.modal-content .prices span {
+  font-family: "Poppins", sans-serif;
+}
+
 .modal-content .prices .new-price span {
   font-weight: 600;
   font-size: 1.8rem;
@@ -343,7 +456,7 @@ nav .nav-list ul li a.contact-color:hover {
 .modal-close-button {
   width: 3rem;
   height: 3rem;
-  border-radius: 30px;
+  display: flex;
   align-self: flex-end;
 }
 
@@ -355,6 +468,7 @@ nav .nav-list ul li a.contact-color:hover {
   color: #fff;
   border: none;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
 }
 
 .modal-close-button button:hover {
@@ -392,7 +506,8 @@ nav .nav-list ul li a.contact-color:hover {
 
 .checkout button:hover {
   color: #fff;
-  background-color: #121212;
+  border: none;
+  background-color: #ffffff;
   transform: scale(1.3);
   transition: 0.3s ease-in-out;
 }
@@ -1022,10 +1137,10 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 .team-content .team-item .team-social-networks {
-  height: 2.3rem;
-  width: 2.3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   top: 5%;
-  left: 85%;
+  left: 80%;
   background-color: hsl(0, 0%, 100%);
   position: absolute;
   z-index: 1;
@@ -1033,7 +1148,43 @@ nav .nav-list ul li a.contact-color:hover {
   border-radius: 50px;
   cursor: pointer;
   transition: 1s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5% 0;
+  gap: 0.6rem;
+}
+
+.team-content .team-item .team-social-networks .social-networks {
   align-items: center;
+  transition: 2s linear;
+}
+
+.team-content .team-item .team-social-networks .social-networks.active {
+  position: relative;
+}
+
+.team-content .team-item .team-social-networks .social-networks.active span:first-of-type {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.team-content .team-item .team-social-networks .social-networks.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.team-content .team-item .team-social-networks .social-networks.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.line {
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #0a1011;
+  display: block;
+  margin: 3px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .team-content .team-item .team-social-networks.active {
@@ -1063,7 +1214,7 @@ nav .nav-list ul li a.contact-color:hover {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.3rem;
 }
 
 .team-content .team-item .team-social-networks .social-networks-icons {
@@ -1094,7 +1245,7 @@ nav .nav-list ul li a.contact-color:hover {
   padding: 10%;
   text-align: start;
   width: 100%;
-  height: 90vh;
+  height: max-content;
   background-color: #fff;
 }
 
@@ -1103,7 +1254,7 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 .faqs .faqs-title h4 {
-  color: #353C6D;
+  color: #000000;
   font-size: 3rem;
   margin: 0;
 }
@@ -1115,7 +1266,7 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 .faqs .faqs-description p {
-  color: #6F5E73;
+  color: #000000;
   font-size: 1.2rem;
 }
 
@@ -1137,6 +1288,8 @@ nav .nav-list ul li a.contact-color:hover {
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 1rem;
 }
 
 .faqs .faqs-item .question.active .question-title h5,
@@ -1149,15 +1302,8 @@ nav .nav-list ul li a.contact-color:hover {
   margin: 0;
 }
 
-.faqs .faqs-content .divider {
-  background-color: #6F5E73;
-  height: 1px;
-  opacity: 0.3;
-  width: 100%;
-}
-
 .faqs .faqs-item .question .question-title h5 {
-  color: #6F5E73;
+  color: #000000;
   font-size: 1.7rem;
   font-weight: 600;
 }
@@ -1165,10 +1311,16 @@ nav .nav-list ul li a.contact-color:hover {
 .faqs .faqs-item .question .question-symbol {
   cursor: pointer;
   width: 2rem;
+  height: 2rem;
+  display: none;
+}
+
+.faqs .faqs-item .question .question-symbol.active {
+  display: block;
 }
 
 .faqs .faqs-item .question .question-symbol svg {
-  fill: #6F5E73;
+  fill: #000000;
   width: 100%;
 }
 
@@ -1189,7 +1341,7 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 .faqs .faqs-content .faqs-item .answer p {
-  color: #6F5E73;
+  color: #5e6d73;
   font-size: 1.2rem;
 }
 
