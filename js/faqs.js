@@ -5,9 +5,10 @@ export default (() => {
     dropDownItems.forEach(dropDownItem => dropDownItem.addEventListener('click' , () =>{
         
         let dropDownParent = dropDownItem.closest('.faqs-item');
+        let icons = dropDownParent.querySelectorAll('.question-symbol');
         let invisibleItem = dropDownParent.querySelector('.answer');
         let activeItem = dropDownParent.querySelector('.answer.active');
-        
+        icons.forEach(icon => icon.classList.toggle('active'));
         if(activeItem && activeItem !== invisibleItem) {
             activeItem.classList.toggle('active');
         }

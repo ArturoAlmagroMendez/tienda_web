@@ -4,14 +4,14 @@
     padding:10%;
     text-align:start;   
     width:100%;
-    height:90vh;
+    height:max-content;
     background-color: #fff;
 }
 .faqs .faqs-title{
     text-align:center;
 }
 .faqs .faqs-title h4{
-    color:#353C6D;
+    color:#000000;
     font-size:3rem;
     margin:0;
 }
@@ -21,7 +21,7 @@
     margin-bottom:3rem;
 }
 .faqs .faqs-description p{
-    color:#6F5E73;
+    color:#000000;
     font-size:1.2rem;
 }
 .faqs .faqs-content{
@@ -41,6 +41,8 @@
     flex-wrap:wrap;
     gap:1rem;
     justify-content:space-between;
+    border-bottom:1px solid black;
+    padding: 1rem;
 }
 .faqs .faqs-item .question.active .question-title h5 ,
 .faqs .faqs-item .question.active .question-symbol span{
@@ -50,23 +52,25 @@
 .faqs .faqs-item .question .question-symbol span{
     margin:0;
 }
-.faqs .faqs-content .divider{
-    background-color:#6F5E73;
-    height:1px;
-    opacity:.3;
-    width:100%;
-}
+
 .faqs .faqs-item .question .question-title h5{
-    color:#6F5E73;
+    color:#000000;
     font-size:1.7rem;
     font-weight:600;
+    
 }
 .faqs .faqs-item .question .question-symbol{
     cursor:pointer;
     width:2rem;
+    height: 2rem;
+    display:none;
+}
+
+.faqs .faqs-item .question .question-symbol.active{
+    display:block;
 }
 .faqs .faqs-item .question .question-symbol svg{
-    fill:#6F5E73;
+    fill:#000000;
     width:100%;
     
 }
@@ -85,6 +89,6 @@
     transition: opacity 0.5s ease-in-out;
 }
 .faqs .faqs-content .faqs-item .answer p{
-    color:#6F5E73;
+    color:#5e6d73;
     font-size:1.2rem;
 }
