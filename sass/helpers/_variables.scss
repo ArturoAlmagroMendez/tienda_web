@@ -6,10 +6,38 @@ $color-faqs: var(--color-faqs);
 $color-contact: var(--color-contact);
 
 :root {
-    --color-slider:#b11818;
-    --color-featured: #8ada2f;
-    --color-details: #fff;
-    --color-team: #0000ff;
-    --color-faqs: #ff00ff;
-    --color-contact: #00ffff;
-  }
+  --color-slider: #b11818;
+  --color-featured: #eca62d;
+  --color-details: #fff;
+  --color-team: #0000ff;
+  --color-faqs: #ff00ff;
+  --color-contact: #00ffff;
+}
+
+@font-face {
+  font-family: Anime;
+  src: url(/fonts/ninja-naruto-font/NinjaNaruto-YOn4.ttf);
+}
+
+@font-face {
+  font-family: Dbz;
+  src: url(/fonts/Dragonball/Saiyan-Sans.ttf);
+}
+
+@font-face {
+  font-family: note;
+  src: url(/fonts/death-note/death-note/Death\ Note.ttf);
+}
+
+@font-face {
+  font-family: titans;
+  src: url(/fonts/attack-on-titan/attack-on-titan/GothTitan-0W5md.ttf);
+}
+@font-face {
+  font-family: chinese;
+  src: url(/fonts/chinese-takeaway/CHINESETAKEAWAY.ttf);
+}
+@font-face {
+  font-family: manga;
+  src: url(/fonts/manga/Manga.otf);
+}

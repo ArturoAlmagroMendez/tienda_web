@@ -29,11 +29,12 @@
 }
 
 .featured .featured-title h2 {
-  font-size: 5rem;
-  font-family: Anime;
+  font-size: 8rem;
+  font-family: Dbz;
   color: transparent;
   -webkit-text-stroke: 2px black;
   margin: 0;
+  letter-spacing: 11px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -55,11 +56,12 @@
   }
 }
 .featured-subtitle p {
-  font-size: 1.8rem;
-  font-weight: 600;
-  font-family: Anime;
-  -webkit-text-stroke: 2px black;
+  font-size: 3rem;
+  font-weight: 500;
+  font-family: Dbz;
+  -webkit-text-stroke: 3px black;
   color: transparent;
+  letter-spacing: 2px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
