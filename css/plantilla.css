@@ -16,10 +16,7 @@ body {
 main {
   width: 100%;
 }
-@font-face {
-  font-family: Anime;
-  src: url(/ninja-naruto-font/NinjaNaruto-YOn4.ttf);
-}
+
 h1,
 h2,
 h3,
