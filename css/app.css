@@ -2,14 +2,14 @@
 header {
   display: flex;
   font-size: 1rem;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 3rem;
   left: 0; /* Posicionamos la cabecera al lado izquierdo */
   position: fixed; /* Hacemos que la cabecera tenga una posición fija */
   top: 0; /* Posicionamos la cabecera pegada arriba */
-  text-transform: uppercase;
   width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.5); /* 50% de opacidad */
+  background-color: rgba(255, 255, 255, 0.9); /* 50% de opacidad */
   height: 10vh;
   z-index: 1001;
   padding: 0.4rem 20%;
@@ -31,10 +31,11 @@ nav .nav-list ul li {
 }
 
 nav .nav-list ul li a {
-  font-family: Anime;
+  font-family: "Poppins", sans-serif;
   color: #000000;
   font-weight: 600;
   font-size: 1.4rem;
+  text-transform: uppercase;
 }
 
 nav .nav-list ul li a:hover {
@@ -114,16 +115,18 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 .nav-button {
-  padding: 2rem;
+  height: 50%;
+  width: 20;
 }
 
 .nav-button button {
-  background-color: #b11818;
+  background-color: var(--color-slider);
   border-radius: 30px;
   border: none;
   color: #121212;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: Anime;
   text-transform: uppercase;
   padding: 0.7rem 1.2rem;
   cursor: pointer;
@@ -154,10 +157,10 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 :root {
-  --color-slider: #b11818;
-  --color-featured: #eca62d;
+  --color-slider: rgb(135, 179, 236);
+  --color-featured: #090806;
   --color-details: #fff;
-  --color-team: #0000ff;
+  --color-team: #fff;
   --color-faqs: #ff00ff;
   --color-contact: #00ffff;
 }
@@ -186,6 +189,18 @@ nav .nav-list ul li a.contact-color:hover {
   font-family: manga;
   src: url(/fonts/manga/Manga.otf);
 }
+@font-face {
+  font-family: ace;
+  src: url(/fonts/Anime-Ace-20-BB/animeace2_bld.ttf);
+}
+@font-face {
+  font-family: kaisei;
+  src: url(/fonts/Kaisei_HarunoUmi/KaiseiHarunoUmi-Bold.ttf);
+}
+@font-face {
+  font-family: london;
+  src: url(/fonts/london_boutique/LondonBoutique_PERSONAL_USE_ONLY.otf);
+}
 .slider {
   align-items: center;
   display: flex;
@@ -199,6 +214,7 @@ nav .nav-list ul li a.contact-color:hover {
   z-index: 1;
   position: relative;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .slider .slider-img {
@@ -207,12 +223,12 @@ nav .nav-list ul li a.contact-color:hover {
   background-size: contain;
   background-position: center;
   z-index: -1;
-  height: 100%;
   width: 100%;
 }
 
 .slider .slider-img img {
   width: 100%;
+  height: 100%;
 }
 
 .slider-title h1 {
@@ -228,15 +244,17 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 .slider-button {
-  width: 15%;
+  width: 20%;
+  padding-bottom: 10rem;
 }
 
 .slider-button button {
-  background-color: rgb(84, 226, 245);
-  border-radius: 30px;
+  background-color: var(--color-slider);
+  border-radius: 40px;
   border: none;
-  font-weight: bold;
-  padding: 1em 1em;
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 1.7rem 0.5rem;
   height: 95%;
   width: 100%;
   cursor: pointer;
@@ -454,10 +472,16 @@ form .modal-form-input select {
 }
 
 .modal-close-button {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   display: flex;
-  align-self: flex-end;
+  left: 47%;
+  top: 0.6rem;
+  position: absolute;
+}
+
+.modal-close-button .active {
+  transform: translateX(2150%);
 }
 
 .modal-close-button button {
@@ -505,9 +529,7 @@ form .modal-form-input select {
 }
 
 .checkout button:hover {
-  color: #fff;
-  border: none;
-  background-color: #ffffff;
+  background-color: #e74b4b;
   transform: scale(1.3);
   transition: 0.3s ease-in-out;
 }
@@ -516,6 +538,7 @@ form .modal-form-input select {
   align-items: center;
   height: 100vh;
   display: flex;
+  background-color: rgb(243, 229, 172);
   flex-direction: column;
   height: 100vh;
   justify-content: center;
@@ -538,6 +561,7 @@ form .modal-form-input select {
   height: 100%;
   width: 100%;
   z-index: -1;
+  filter: blur(3px);
 }
 
 .featured .featured-background-image img {
@@ -546,10 +570,8 @@ form .modal-form-input select {
 }
 
 .featured .featured-title h2 {
-  font-size: 8rem;
-  font-family: Dbz;
-  color: transparent;
-  -webkit-text-stroke: 2px black;
+  font-size: 6rem;
+  font-family: Anime;
   margin: 0;
   letter-spacing: 11px;
   opacity: 0;
@@ -559,31 +581,17 @@ form .modal-form-input select {
 .featured-title h2.fade-in-text {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-}
-
-.featured .featured-title h2.animate {
-  animation: change-color 1s forwards;
   color: var(--color-featured);
 }
 
-@keyframes change-color {
-  from {
-    color: transparent;
-  }
-  to {
-    color: var(--color-featured);
-    border: none;
-  }
-}
 .featured-subtitle p {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
-  font-family: Dbz;
-  -webkit-text-stroke: 3px black;
-  color: transparent;
+  font-family: Anime;
   letter-spacing: 2px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  color: var(--color-featured);
 }
 
 .featured-subtitle p.fade-in-text {
@@ -591,12 +599,8 @@ form .modal-form-input select {
   transition: opacity 0.5s ease-in-out;
 }
 
-.featured-subtitle p.animate {
-  animation: change-color 1s forwards;
-}
-
 .featured-subtitle {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .featured .featured-content {
@@ -651,8 +655,13 @@ form .modal-form-input select {
   font-size: 1.1rem;
 }
 
-.featured .featured-content .featured-item .featured-item-text {
-  font-size: 1rem;
+.featured .featured-content .featured-item .featured-item-title h3 {
+  font-family: "Poppins", sans-serif;
+}
+
+.featured .featured-content .featured-item .featured-item-text p {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .details {
@@ -664,7 +673,6 @@ form .modal-form-input select {
   justify-content: center;
   align-items: center;
   padding: 0 10%;
-  background-color: #6DD3E7;
 }
 
 .details .details-background-image {
@@ -1100,7 +1108,8 @@ form .modal-form-input select {
   text-align: center;
   width: 100%;
   height: 100vh;
-  background-color: #11a697;
+  background-color: rgb(99, 150, 215);
+  padding: 0 10%;
 }
 
 .team .team-title {
@@ -1122,10 +1131,12 @@ form .modal-form-input select {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  height: 100%;
+  width: 25%;
 }
 
 .team-content .team-item .team-item-image {
-  height: 60%;
+  height: 70%;
   position: relative;
   width: 100%;
 }
@@ -1141,7 +1152,7 @@ form .modal-form-input select {
   width: 2.5rem;
   top: 5%;
   left: 80%;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 2%);
   position: absolute;
   z-index: 1;
   gap: 0.2em;
@@ -1165,7 +1176,7 @@ form .modal-form-input select {
 }
 
 .team-content .team-item .team-social-networks .social-networks.active span:first-of-type {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(3px) rotate(45deg);
 }
 
 .team-content .team-item .team-social-networks .social-networks.active span:nth-child(2) {
@@ -1173,13 +1184,13 @@ form .modal-form-input select {
 }
 
 .team-content .team-item .team-social-networks .social-networks.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 .line {
-  width: 2rem;
-  height: 0.3rem;
-  background-color: #0a1011;
+  width: 1.5rem;
+  height: 0.2rem;
+  background-color: #ffffff;
   display: block;
   margin: 3px auto;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1203,6 +1214,7 @@ form .modal-form-input select {
   transition: 0.3s linear;
   height: 100%;
   width: 100%;
+  fill: #fff;
 }
 
 .team-content .team-item .team-social-networks .social-networks-icons ul li svg:hover {
@@ -1230,8 +1242,13 @@ form .modal-form-input select {
   font-family: "Poppins", sans-serif;
 }
 
-.team-content .team-item .team-item-text-subtitle {
-  font-size: 0.8em;
+.team-content .team-item .team-item-title h5 {
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.team-content .team-item .team-item-text-subtitle p {
+  font-size: 1rem;
 }
 
 .team-content .team-item .team-social-networks button {
@@ -1246,7 +1263,7 @@ form .modal-form-input select {
   text-align: start;
   width: 100%;
   height: max-content;
-  background-color: #fff;
+  background-color: #1458be;
 }
 
 .faqs .faqs-title {
@@ -1257,6 +1274,7 @@ form .modal-form-input select {
   color: #000000;
   font-size: 3rem;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .faqs .faqs-description {
@@ -1290,6 +1308,7 @@ form .modal-form-input select {
   justify-content: space-between;
   border-bottom: 1px solid black;
   padding: 1rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .faqs .faqs-item .question.active .question-title h5,

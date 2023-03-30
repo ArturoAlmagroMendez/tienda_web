@@ -3,18 +3,18 @@ export default(() =>{
     const modalContainer = document.querySelector('.modal-container');
     const modalButton = document.querySelector('#modal-button');
     const textSlider = document.querySelector('.modal-content');
-
+    const closeButton = document.querySelector('#close-button');
     modalButton.addEventListener('click', () => {
         textSlider.classList.toggle('active');
+        closeButton.classList.toggle('active'); 
     });
-    const closeButton = document.querySelector('#close-button');
     modalOpenButton.addEventListener('click', () => {
         modalContainer.classList.add('active');
-        console.log('abriendo modal');
     });
     closeButton.addEventListener('click', () => {
         modalContainer.classList.remove('active');
-        console.log('cerrando modal');
+        textSlider.classList.remove('active');
+        closeButton.classList.remove('active'); 
     });
 
 })();

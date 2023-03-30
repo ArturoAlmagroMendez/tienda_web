@@ -2,6 +2,7 @@
   align-items: center;
   height: 100vh;
   display: flex;
+  background-color: rgb(243, 229, 172);
   flex-direction: column;
   height: 100vh;
   justify-content: center;
@@ -21,7 +22,8 @@
   position: absolute;
     height: 100%;
     width: 100%;
-  z-index: -1;
+    z-index: -1;
+    filter: blur(3px);
 }
 .featured .featured-background-image img{
     width: 100%;
@@ -29,10 +31,8 @@
 }
 
 .featured .featured-title h2 {
-  font-size: 8rem;
-  font-family: Dbz;
-  color: transparent;
-  -webkit-text-stroke: 2px black;
+  font-size: 6rem;
+  font-family: Anime;
   margin: 0;
   letter-spacing: 11px;
   opacity: 0;
@@ -41,40 +41,26 @@
 .featured-title h2.fade-in-text {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-}
-.featured .featured-title h2.animate {
-  animation: change-color 1s forwards;
   color: var(--color-featured);
 }
-@keyframes change-color {
-  from {
-    color: transparent;
-  }
-  to {
-    color: var(--color-featured);
-    border: none;
-  }
-}
-.featured-subtitle p {
-  font-size: 3rem;
+
+.featured-subtitle p{
+  font-size: 2rem;
   font-weight: 500;
-  font-family: Dbz;
-  -webkit-text-stroke: 3px black;
-  color: transparent;
+  font-family: Anime;
   letter-spacing: 2px;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  color: var(--color-featured);
 }
 .featured-subtitle p.fade-in-text {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
 
-.featured-subtitle p.animate {
-  animation: change-color 1s forwards;
-}
+
 .featured-subtitle {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 .featured .featured-content {
   display: flex;
@@ -122,7 +108,13 @@
 .featured .featured-content .featured-item .featured-item-title {
   font-weight: 600;
   font-size: 1.1rem;
+  
+
 }
-.featured .featured-content .featured-item .featured-item-text {
-  font-size: 1rem;
+.featured .featured-content .featured-item .featured-item-title h3{
+  font-family: 'Poppins', sans-serif;
+}
+.featured .featured-content .featured-item .featured-item-text p{
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
 }

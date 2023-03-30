@@ -5,7 +5,8 @@
     text-align: center;
     width: 100%;
     height: 100vh;
-    background-color: #11a697;
+    background-color: rgb(99, 150, 215);
+    padding:0 10%;
     
   }
   .team .team-title{
@@ -25,11 +26,13 @@
     display: flex;
     flex-direction: column;
     gap:0.5em;
+    height:100%;
+    width:25%;
   }
   .team-content .team-item .team-item-image {
-    height: 60%;                
+    height:70%;                
     position: relative;
-    width: 100%;
+    width:100%;
 }
 .team-content .team-item .team-item-image img{
     height:100%;
@@ -41,7 +44,7 @@
     width: 2.5rem;
     top:5%;
     left:80%;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(0, 0%, 2%);
     position: absolute;
     z-index:1;
     gap:.2em;
@@ -63,18 +66,18 @@
     position: relative; 
   }
   .team-content .team-item .team-social-networks .social-networks.active span:first-of-type {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(3px) rotate(45deg);
   } 
   .team-content .team-item .team-social-networks .social-networks.active span:nth-child(2) {
     opacity: 0;
   } 
   .team-content .team-item .team-social-networks .social-networks.active span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-9px) rotate(-45deg);
   } 
   .line{
-    width: 2rem;
-    height: .3rem;
-    background-color: #0a1011;
+    width: 1.5rem;
+    height: .2rem;
+    background-color: #ffffff;
     display: block;
     margin: 3px auto;
     -webkit-transition: all 0.3s ease-in-out;
@@ -94,6 +97,7 @@
     transition: .3s linear;
     height:100%;
     width:100%;
+    fill:#fff;
   }
   .team-content .team-item .team-social-networks .social-networks-icons ul li svg:hover{
     transform: scale(1.2);
@@ -116,9 +120,15 @@
     font-size: 1.8em;
     font-family: 'Poppins', sans-serif;
   }
-  .team-content .team-item .team-item-text-subtitle{
-    font-size: 0.8em;
+ 
+  .team-content .team-item .team-item-title h5{
+    font-size: 1.5rem;
+    color:#000000;
   }
+  .team-content .team-item .team-item-text-subtitle p{
+    font-size: 1rem;
+  }
+
   .team-content .team-item .team-social-networks button{
     width:100%;
     height:100%;

@@ -6,10 +6,10 @@ $color-faqs: var(--color-faqs);
 $color-contact: var(--color-contact);
 
 :root {
-  --color-slider: #b11818;
-  --color-featured: #eca62d;
+  --color-slider: rgb(135, 179, 236);
+  --color-featured: #090806;
   --color-details: #fff;
-  --color-team: #0000ff;
+  --color-team: #fff;
   --color-faqs: #ff00ff;
   --color-contact: #00ffff;
 }
@@ -41,3 +41,16 @@ $color-contact: var(--color-contact);
   font-family: manga;
   src: url(/fonts/manga/Manga.otf);
 }
+@font-face {
+  font-family: ace;
+  src: url(/fonts/Anime-Ace-20-BB/animeace2_bld.ttf);
+}
+@font-face {
+  font-family: kaisei;
+  src: url(/fonts/Kaisei_HarunoUmi/KaiseiHarunoUmi-Bold.ttf);
+}
+@font-face {
+  font-family: london;
+  src: url(/fonts/london_boutique/LondonBoutique_PERSONAL_USE_ONLY.otf);
+}
+

@@ -5,7 +5,7 @@
     text-align:start;   
     width:100%;
     height:max-content;
-    background-color: #fff;
+    background-color: #1458be;
 }
 .faqs .faqs-title{
     text-align:center;
@@ -14,6 +14,7 @@
     color:#000000;
     font-size:3rem;
     margin:0;
+    font-family: 'Poppins',sans-serif;
 }
 .faqs .faqs-description{
     padding:0 25%;
@@ -43,10 +44,13 @@
     justify-content:space-between;
     border-bottom:1px solid black;
     padding: 1rem;
+    font-family: 'Poppins',sans-serif;
+
 }
 .faqs .faqs-item .question.active .question-title h5 ,
 .faqs .faqs-item .question.active .question-symbol span{
     color:#353C6D;
+    
 }
 .faqs .faqs-item .question .question-title h5 ,
 .faqs .faqs-item .question .question-symbol span{
