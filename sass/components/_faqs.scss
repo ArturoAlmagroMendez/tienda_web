@@ -47,37 +47,53 @@
     font-family: 'Poppins',sans-serif;
 
 }
-.faqs .faqs-item .question.active .question-title h5 ,
-.faqs .faqs-item .question.active .question-symbol span{
-    color:#353C6D;
-    
-}
-.faqs .faqs-item .question .question-title h5 ,
-.faqs .faqs-item .question .question-symbol span{
-    margin:0;
-}
-
 .faqs .faqs-item .question .question-title h5{
     color:#000000;
     font-size:1.7rem;
-    font-weight:600;
-    
+    font-weight:600; 
 }
-.faqs .faqs-item .question .question-symbol{
-    cursor:pointer;
-    width:2rem;
-    height: 2rem;
-    display:none;
-}
+.plus-minus-toggle {
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .plus-minus-toggle::before,
+  .plus-minus-toggle::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .plus-minus-toggle::before {
+    transform-origin: center center;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  
+  .plus-minus-toggle::after {
+    transform-origin: center center;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  
+  .plus-minus-toggle.active::before {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  
+  .plus-minus-toggle.active::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  
+  .plus-minus-toggle.active::before {
+    opacity: 0;
+  }
 
-.faqs .faqs-item .question .question-symbol.active{
-    display:block;
-}
-.faqs .faqs-item .question .question-symbol svg{
-    fill:#000000;
-    width:100%;
-    
-}
 .faqs .faqs-content .faqs-item .answer{
     padding-right:1rem;
     display:none;
@@ -93,6 +109,6 @@
     transition: opacity 0.5s ease-in-out;
 }
 .faqs .faqs-content .faqs-item .answer p{
-    color:#5e6d73;
+    color:#000000;
     font-size:1.2rem;
 }

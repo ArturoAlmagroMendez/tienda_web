@@ -12,6 +12,7 @@
     position: relative;
     overflow: hidden;
     background-color: #fff;
+    
   }
   .slider .slider-img {
     position:absolute;
@@ -19,6 +20,7 @@
     background-size: contain;
     background-position: center;
     z-index:-1;
+    filter:blur(2px);
     width: 100%;
     
   }

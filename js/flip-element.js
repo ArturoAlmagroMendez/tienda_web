@@ -3,7 +3,7 @@ export default (() => {
 
     flipButtons.forEach((flipButton) => {
         flipButton.addEventListener('click' , () =>{
-            flipButton.closest('.flip-card').classList.toggle('active');
+            flipButton.closest('.flip-card-inner').classList.toggle('active');
         });
     });
    
