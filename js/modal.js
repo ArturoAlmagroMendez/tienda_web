@@ -6,6 +6,17 @@ export default(() =>{
     const closeButton = document.querySelector('.close-button');
     const activeLink = document.querySelector('.modal-content ul li a.active');
     const productLinks = document.querySelectorAll('.modal-content ul li a');
+    const listItems = document.querySelectorAll('.modal-description-list li a');
+
+    listItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        const target = item.dataset.target;
+        const targetElement = document.getElementById(target);
+        const activeElement = document.querySelector('.modal-description-text.active');
+        activeElement.classList.remove('active');
+        targetElement.classList.add('active');
+    });
+    });
 
     modalButton.addEventListener('click', () => {
         textSlider.classList.toggle('active');
