@@ -16,11 +16,7 @@
   }
   .slider .slider-img {
     position:absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     z-index:-1;
-    filter:blur(2px);
     width: 100%;
     
   }
@@ -30,18 +26,17 @@
   }
   .slider-title h1 {
     font-family: Anime;
-    color:#b11818;
-     font-size: 5rem;
+    color:var(--color-slider);
+     font-size: 4.3rem;
   }
  
   .slider-text p {
     font-family: Anime;
-    color:#b11818;
+    color:var(--color-slider);
     font-size: 2rem;
   }
   .slider-button{
     width:20%;
-    padding-bottom: 10rem;
   }
   .slider-button button {
     background-color: var(--color-slider);

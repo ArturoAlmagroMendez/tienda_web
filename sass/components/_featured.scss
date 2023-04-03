@@ -2,7 +2,7 @@
   align-items: center;
   height: 100vh;
   display: flex;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(22, 19, 19);
   flex-direction: column;
   height: 100vh;
   justify-content: center;
@@ -25,7 +25,6 @@
     height: 100%;
     width: 100%;
     z-index: -1;
-    filter: blur(3px);
 }
 .featured .featured-background-image img{
     width: 100%;
@@ -33,7 +32,7 @@
 }
 
 .featured .featured-title h2 {
-  font-size: 6rem;
+  font-size: 4.3rem;
   font-family: Anime;
   margin: 0;
   letter-spacing: 11px;
@@ -78,7 +77,7 @@
   flex-direction: column;
   width: 33%;
   border: none;
-  background-color: hsla(0, 0%, 100%, 0.78);
+  background-color: hsla(0, 0%, 100%, 0.58);
   border-radius: 10px;
   padding: 1rem 0;
   box-shadow: 0 0 62px rgba(0, 0, 0, 0.3);

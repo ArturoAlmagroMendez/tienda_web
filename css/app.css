@@ -9,7 +9,7 @@ header {
   top: 0; /* Posicionamos la cabecera pegada arriba */
   width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
   align-items: center;
-  background-color: rgba(89, 185, 230, 0.6); /* 50% de opacidad */
+  background-color: rgba(255, 255, 255, 0.6); /* 50% de opacidad */
   height: 10vh;
   z-index: 1001;
   padding: 0.4rem 20%;
@@ -157,12 +157,12 @@ nav .nav-list ul li a.contact-color:hover {
 }
 
 :root {
-  --color-slider: rgb(135, 179, 236);
-  --color-featured: #5b7bc2;
-  --color-details: #fff;
-  --color-team: #fff;
-  --color-faqs: #ff00ff;
-  --color-contact: #00ffff;
+  --color-slider: rgb(255, 255, 255);
+  --color-featured: #ff0404;
+  --color-details: #ffffff;
+  --color-team: #ff0000;
+  --color-faqs: #ffffff;
+  --color-contact: #f80000;
 }
 
 @font-face {
@@ -219,11 +219,7 @@ nav .nav-list ul li a.contact-color:hover {
 
 .slider .slider-img {
   position: absolute;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   z-index: -1;
-  filter: blur(2px);
   width: 100%;
 }
 
@@ -234,19 +230,18 @@ nav .nav-list ul li a.contact-color:hover {
 
 .slider-title h1 {
   font-family: Anime;
-  color: #b11818;
-  font-size: 5rem;
+  color: var(--color-slider);
+  font-size: 4.3rem;
 }
 
 .slider-text p {
   font-family: Anime;
-  color: #b11818;
+  color: var(--color-slider);
   font-size: 2rem;
 }
 
 .slider-button {
   width: 20%;
-  padding-bottom: 10rem;
 }
 
 .slider-button button {
@@ -317,6 +312,7 @@ nav .nav-list ul li a.contact-color:hover {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  padding: 0 5%;
 }
 
 form .modal-form-input {
@@ -430,7 +426,6 @@ form .modal-form-input select {
   position: absolute;
   transform: translateX(50%);
   transition: 0.2s linear;
-  padding: 5%;
 }
 
 .modal-content .modal-title h4 {
@@ -480,12 +475,14 @@ form .modal-form-input select {
 }
 
 .modal-close-button {
-  width: 2rem;
-  height: 2rem;
+  width: 1.2rem;
+  height: 1.2rem;
   position: absolute;
   top: 2%;
   left: 96%;
   z-index: 1001;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 .modal-close-button button {
@@ -566,7 +563,7 @@ form .modal-form-input select {
   align-items: center;
   height: 100vh;
   display: flex;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(22, 19, 19);
   flex-direction: column;
   height: 100vh;
   justify-content: center;
@@ -590,7 +587,6 @@ form .modal-form-input select {
   height: 100%;
   width: 100%;
   z-index: -1;
-  filter: blur(3px);
 }
 
 .featured .featured-background-image img {
@@ -599,7 +595,7 @@ form .modal-form-input select {
 }
 
 .featured .featured-title h2 {
-  font-size: 6rem;
+  font-size: 4.3rem;
   font-family: Anime;
   margin: 0;
   letter-spacing: 11px;
@@ -647,7 +643,7 @@ form .modal-form-input select {
   flex-direction: column;
   width: 33%;
   border: none;
-  background-color: hsla(0, 0%, 100%, 0.78);
+  background-color: hsla(0, 0%, 100%, 0.58);
   border-radius: 10px;
   padding: 1rem 0;
   box-shadow: 0 0 62px rgba(0, 0, 0, 0.3);
@@ -1135,10 +1131,18 @@ form .modal-form-input select {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  position: relative;
   width: 100%;
   height: 100vh;
   background-color: rgb(99, 150, 215);
-  padding: 0 10%;
+  z-index: 1;
+}
+
+.team .team-background-image {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .team .team-title {
@@ -1153,6 +1157,7 @@ form .modal-form-input select {
   display: flex;
   justify-content: center;
   gap: 2em;
+  padding: 0 10%;
 }
 
 .team-content .team-item {

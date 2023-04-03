@@ -1,5 +1,6 @@
 import './header.js';
 import './modal.js';
+import './tabs.js';
 import './featured.js';
 import './socials.js';
 import './faqs.js';

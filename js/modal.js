@@ -4,20 +4,11 @@ export default(() =>{
     const modalButton = document.querySelector('#modal-button');
     const textSlider = document.querySelector('.modal-content');
     const closeButton = document.querySelector('.close-button');
-    const activeLink = document.querySelector('.modal-content ul li a.active');
-    const productLinks = document.querySelectorAll('.modal-content ul li a');
-    const listItems = document.querySelectorAll('.modal-description-list li a');
 
-    listItems.forEach((item) => {
-    item.addEventListener('click', () => {
-        const target = item.dataset.target;
-        const targetElement = document.getElementById(target);
-        const activeElement = document.querySelector('.modal-description-text.active');
-        activeElement.classList.remove('active');
-        targetElement.classList.add('active');
-    });
-    });
-
+    const tabs = document.querySelectorAll('.modal-description .modal-description-list ul li a');
+    const activeText = document.querySelector('#modal-description-text');
+    const tabsTexts = document.querySelectorAll('.modal-description .modal-description-list .modal-description-text');
+    const activeTab = document.querySelector('.modal-description .modal-description-list ul li a');
     modalButton.addEventListener('click', () => {
         textSlider.classList.toggle('active');
         closeButton.classList.toggle('active'); 
@@ -27,23 +18,23 @@ export default(() =>{
         modalContainer.classList.add('active');
        
     });
-
     closeButton.addEventListener('click' , () =>{
         modalContainer.classList.remove('active');
         textSlider.classList.remove('active');
         closeButton.classList.remove('active');
-        
+
+        tabs.forEach((tab) => {
+            tab.classList.remove('active');
+        });
+        activeTab.classList.add('active');
+
+        tabsTexts.forEach((tabText) => {
+            tabText.classList.remove('active');
+        });
+            activeText.classList.add('active');
     });
    
-    for(let i = 0; i < productLinks.length; i++){
-        productLinks[i].addEventListener('click' , () => {
-            if (activeLink != productLinks[i]){
-                activeLink.classList.remove('active');
-                productLinks[i].classList.add('active');
-            }
-            productLinks[i].classList.add('active');
-        });
-    }
+    
     // productLinks.forEach((productLink) => {
     //     if(){
 
