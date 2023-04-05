@@ -116,7 +116,7 @@ nav .nav-list ul li a.contact-color:hover {
 
 .nav-button {
   height: 50%;
-  width: 20;
+  width: 20%;
 }
 
 .nav-button button {
@@ -282,12 +282,75 @@ nav .nav-list ul li a.contact-color:hover {
   overflow: hidden;
 }
 
+.modal-close-button {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 2%;
+  left: 96%;
+  z-index: 1001;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.modal-close-button button {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-close-button button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid black;
+}
+
+.modal-return-button {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 2%;
+  left: 51%;
+  z-index: 1001;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.modal-return-button button {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.modal-return-button button:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid black;
+}
+
+.modal-return-button.active {
+  display: block;
+}
+
 .modal-content-front {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6rem;
+  gap: 3rem;
 }
 
 .modal-content.active {
@@ -311,7 +374,7 @@ nav .nav-list ul li a.contact-color:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   padding: 0 5%;
 }
 
@@ -474,34 +537,6 @@ form .modal-form-input select {
   border-radius: 30px;
 }
 
-.modal-close-button {
-  width: 1.2rem;
-  height: 1.2rem;
-  position: absolute;
-  top: 2%;
-  left: 96%;
-  z-index: 1001;
-  font-size: 0.7rem;
-  text-align: center;
-}
-
-.modal-close-button button {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-family: "Poppins", sans-serif;
-}
-
-.modal-close-button button:hover {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid black;
-}
-
 .modal-content ul {
   display: flex;
   gap: 0.7rem;
@@ -512,11 +547,17 @@ form .modal-form-input select {
 }
 
 .modal-content ul li a:hover {
-  background-color: #0084ff;
+  border-bottom: 1px solid black;
 }
 
 .modal-content ul li a.active {
-  background-color: #0084ff;
+  border-bottom: 1px solid black;
+}
+
+.modal-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .modal-content .modal-description-text {
@@ -557,6 +598,79 @@ form .modal-form-input select {
   background-color: #e74b4b;
   transform: scale(1.3);
   transition: 0.3s ease-in-out;
+}
+
+.plus-minus-button {
+  display: flex;
+  width: 20%;
+  height: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.minus-button {
+  width: 25%;
+  height: 100%;
+}
+
+.minus-button button {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 247, 41, 0.7);
+  border: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.minus-button button:hover {
+  background-color: rgb(255, 43, 43);
+}
+
+.input-plus-minus {
+  width: 50%;
+  height: 100%;
+}
+
+.input-plus-minus input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.input-plus-minus input::-webkit-inner-spin-button,
+.input-plus-minus input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.plus-button {
+  width: 25%;
+  height: 100%;
+}
+
+.plus-button button {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 247, 41, 0.7);
+  font-size: 1.4rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.plus-button button:hover {
+  background-color: rgb(255, 43, 43);
+}
+
+.total-price {
+  font-weight: 600;
+}
+
+.shipment {
+  color: rgb(255, 43, 43);
+  font-weight: 600;
 }
 
 .featured {

@@ -4,15 +4,15 @@ export default(() =>{
     const modalButton = document.querySelector('#modal-button');
     const textSlider = document.querySelector('.modal-content');
     const closeButton = document.querySelector('.close-button');
-
+    const returnButtonContainer = document.querySelector('.modal-return-button');
+    const returnButton = document.querySelector('.return-button');
     const tabs = document.querySelectorAll('.modal-description .modal-description-list ul li a');
     const activeText = document.querySelector('#modal-description-text');
     const tabsTexts = document.querySelectorAll('.modal-description .modal-description-list .modal-description-text');
     const activeTab = document.querySelector('.modal-description .modal-description-list ul li a');
     modalButton.addEventListener('click', () => {
-        textSlider.classList.toggle('active');
-        closeButton.classList.toggle('active'); 
-        closeButton.classList.add('active');
+        textSlider.classList.add('active');
+        returnButtonContainer.classList.add('active');
     });
     modalOpenButton.addEventListener('click', () => {
         modalContainer.classList.add('active');
@@ -22,6 +22,8 @@ export default(() =>{
         modalContainer.classList.remove('active');
         textSlider.classList.remove('active');
         closeButton.classList.remove('active');
+        returnButtonContainer.classList.remove('active');
+
 
         tabs.forEach((tab) => {
             tab.classList.remove('active');
@@ -33,7 +35,12 @@ export default(() =>{
         });
             activeText.classList.add('active');
     });
-   
+    returnButton.addEventListener('click' , () =>{
+        textSlider.classList.remove('active');
+        returnButtonContainer.classList.remove('active');
+
+
+    });
     
     // productLinks.forEach((productLink) => {
     //     if(){

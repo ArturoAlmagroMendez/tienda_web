@@ -1,0 +1,64 @@
+.plus-minus-button{
+    display:flex;
+    width:20%;
+    height:2rem;
+    font-family: 'Poppins' , sans-serif;
+}
+.minus-button{
+    width:25%;
+    height:100%;
+}
+.minus-button button{
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 247, 41, 0.7);
+    border: none;
+    border-top-left-radius:20px;
+    border-bottom-left-radius: 20px;
+    font-size: 1.4rem;
+    cursor:pointer;
+
+}
+.minus-button button:hover{
+    background-color: rgb(255, 43, 43);
+}
+.input-plus-minus{
+    width:50%;
+    height:100%;    
+}
+.input-plus-minus input{
+    width: 100%;
+    height:100%;
+    text-align: center;
+}
+.input-plus-minus input::-webkit-inner-spin-button,
+.input-plus-minus input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.plus-button{
+    width:25%;
+    height:100%;
+}
+.plus-button button{
+    height:100%;
+    width: 100%;
+    background-color: rgba(0, 247, 41, 0.7);
+    font-size: 1.4rem;
+    border-top-right-radius:20px;
+    border-bottom-right-radius: 20px;
+    border:none;
+    cursor: pointer;
+
+}
+.plus-button button:hover{
+    background-color: rgb(255, 43, 43);
+}
+
+.total-price{
+    font-weight:600;
+}
+.shipment{
+    color:rgb(255, 43, 43);
+    font-weight: 600;
+}

@@ -15,13 +15,73 @@
     transition: .3s linear;
     position:fixed;
     overflow: hidden;
+    
+  }
+  .modal-close-button{
+    width:2rem;
+    height:2rem;
+    position: absolute;
+    top: 2%;
+    left: 96%;
+    z-index:1001;
+    font-size:.7rem;
+    text-align: center;
+    } 
+  .modal-close-button button{
+    width:100%;
+    height:100%;
+    border-radius:30px;
+    background-color: #000;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    
+  }
+  .modal-close-button button:hover{
+    background-color: #fff;
+    color:#000;
+    border:2px solid black;
+  }
+  .modal-return-button{
+    display:none;
+    width:2rem;
+    height:2rem;
+    position: absolute;
+    top: 2%;
+    left: 51%;
+    z-index:1001;
+    font-size:.7rem;
+    text-align: center;
+
+  }
+  .modal-return-button button{
+     width:100%;
+    height:100%;
+    border-radius:30px;
+    background-color: #000;
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size:1rem;
+    font-weight: 600;
+  }
+  .modal-return-button button:hover{
+    background-color: #fff;
+    color:#000;
+    border:2px solid black;
+  }
+  .modal-return-button.active{
+    display:block;
+
   }
   .modal-content-front{
     width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:6rem;
+    gap:3rem;
   }
   .modal-content.active{
     transform: translateX(0%);
@@ -42,7 +102,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:3rem;
+    gap:2rem;
     padding:0 5%;
   }
   form .modal-form-input{
@@ -185,32 +245,7 @@
     padding:0 .5rem;
     border-radius:30px;
   }
-  .modal-close-button{
-    width:1.2rem;
-    height:1.2rem;
-    position: absolute;
-    top: 2%;
-    left: 96%;
-    z-index:1001;
-    font-size:.7rem;
-    text-align: center;
-    } 
-  .modal-close-button button{
-    width:100%;
-    height:100%;
-    border-radius:30px;
-    background-color: #000;
-    color:#fff;
-    border:none;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-    
-  }
-  .modal-close-button button:hover{
-    background-color: #fff;
-    color:#000;
-    border:2px solid black;
-  }
+  
   .modal-content ul{
     display:flex;
     gap:.7rem;
@@ -219,10 +254,15 @@
     cursor:pointer;
   }
   .modal-content ul li a:hover{
-    background-color: #0084ff;
+    border-bottom: 1px solid black;
   }
   .modal-content ul li a.active{
-   background-color: #0084ff;
+    border-bottom: 1px solid black;
+  }
+  .modal-description{
+    display:flex;
+    flex-direction: column;
+    gap:.5rem;
   }
   .modal-content .modal-description-text{
    display:none;
