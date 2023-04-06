@@ -137,6 +137,7 @@ nav .nav-list ul li a.contact-color:hover {
 .nav-button button:hover {
   background-color: #121212;
   color: #fff;
+  transform: scale(1.2);
 }
 
 .nav-button button.featured-header-button {
@@ -254,13 +255,14 @@ nav .nav-list ul li a.contact-color:hover {
   height: 95%;
   width: 100%;
   cursor: pointer;
+  transition: 0.5s ease-out;
 }
 
 .slider-button button:hover {
   background-color: #000000;
   color: #fff;
   /*font-size:1.2em;*/
-  transition: 0.5s ease-out;
+  transform: scale(1.2);
 }
 
 .modal-container {
@@ -711,6 +713,7 @@ form .modal-form-input select {
 .featured .featured-title h2 {
   font-size: 4.3rem;
   font-family: Anime;
+  font-weight: 300;
   margin: 0;
   letter-spacing: 11px;
   opacity: 0;
@@ -725,7 +728,7 @@ form .modal-form-input select {
 
 .featured-subtitle p {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 300;
   font-family: Anime;
   letter-spacing: 2px;
   opacity: 0;
@@ -789,13 +792,10 @@ form .modal-form-input select {
   height: 12rem;
 }
 
-.featured .featured-content .featured-item .featured-item-title {
-  font-weight: 600;
-  font-size: 1.1rem;
-}
-
 .featured .featured-content .featured-item .featured-item-title h3 {
   font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.9rem;
 }
 
 .featured .featured-content .featured-item .featured-item-text p {
@@ -811,7 +811,7 @@ form .modal-form-input select {
   position: relative;
   justify-content: center;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 5%;
 }
 
 .details .details-background-image {
@@ -833,6 +833,9 @@ form .modal-form-input select {
   justify-content: center;
   width: 50%;
   position: relative;
+  border-radius: 30px;
+  background-color: rgba(232, 57, 57, 0.9);
+  padding: 1.5rem;
 }
 
 .details .details-column .details-column-item {
@@ -843,8 +846,8 @@ form .modal-form-input select {
 }
 
 .details .details-column .details-column-item .details-item-svg {
-  height: 8rem;
-  width: 8em;
+  height: 5rem;
+  width: 5rem;
 }
 
 .details .details-column .details-column-item .details-item-svg svg {
@@ -864,6 +867,7 @@ form .modal-form-input select {
   }
 }
 .details .details-column .details-column-item .details-item-description .details-item-description-title h5 {
+  color: #000000;
   font-size: 2rem;
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -882,6 +886,8 @@ form .modal-form-input select {
 }
 
 .details .details-column .details-column-item .details-item-description .details-item-description-text p {
+  color: #000000;
+  font-weight: 600;
   font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
 }
@@ -1248,7 +1254,7 @@ form .modal-form-input select {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: rgb(99, 150, 215);
+  background-color: hsl(0, 0%, 0%);
   z-index: 1;
 }
 
@@ -1259,32 +1265,39 @@ form .modal-form-input select {
   height: 100%;
 }
 
-.team .team-title {
-  font-size: 1.8em;
+.team .team-title h3 {
+  font-family: Anime;
+  font-size: 6rem;
+  font-weight: 300;
 }
 
 .team .team-text {
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
+}
+
+.team .team-text p {
+  font-size: 2rem;
 }
 
 .team-content {
   display: flex;
   justify-content: center;
-  gap: 2em;
+  gap: 4rem;
   padding: 0 10%;
 }
 
 .team-content .team-item {
   align-items: center;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.2rem;
   height: 100%;
   width: 25%;
 }
 
 .team-content .team-item .team-item-image {
-  height: 70%;
+  height: 60%;
   position: relative;
   width: 100%;
 }
@@ -1314,17 +1327,12 @@ form .modal-form-input select {
   gap: 0.6rem;
 }
 
-.team-content .team-item .team-social-networks .social-networks {
-  align-items: center;
-  transition: 2s linear;
-}
-
 .team-content .team-item .team-social-networks .social-networks.active {
   position: relative;
 }
 
 .team-content .team-item .team-social-networks .social-networks.active span:first-of-type {
-  transform: translateY(3px) rotate(45deg);
+  transform: translateY(1px) rotate(45deg);
 }
 
 .team-content .team-item .team-social-networks .social-networks.active span:nth-child(2) {
@@ -1332,13 +1340,13 @@ form .modal-form-input select {
 }
 
 .team-content .team-item .team-social-networks .social-networks.active span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-12px) rotate(-45deg);
 }
 
 .line {
-  width: 1.5rem;
+  width: 1.4rem;
   height: 0.2rem;
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
   display: block;
   margin: 3px auto;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1391,8 +1399,8 @@ form .modal-form-input select {
 }
 
 .team-content .team-item .team-item-title h5 {
-  font-size: 1.5rem;
-  color: #000000;
+  font-size: 1.7rem;
+  color: hsl(0, 0%, 96%);
 }
 
 .team-content .team-item .team-item-text-subtitle p {
@@ -1404,6 +1412,63 @@ form .modal-form-input select {
   height: 100%;
 }
 
+:root {
+  --size: 100px;
+  --frames: 62;
+}
+
+.like-button {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+input.checkbox {
+  display: none;
+}
+
+.like {
+  display: inline;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+  border-radius: 999px;
+  overflow: visible;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hearth {
+  background-image: url("https://assets.codepen.io/23500/Hashflag-DragonBall.svg");
+  background-size: calc(var(--size) * var(--frames)) var(--size);
+  background-repeat: no-repeat;
+  background-position-x: calc(var(--size) * (var(--frames) * -1 + 2));
+  background-position-y: calc(var(--size) * 0.02);
+  width: var(--size);
+  height: var(--size);
+}
+
+input:checked + .hearth {
+  animation: like 1s steps(calc(var(--frames) - 3));
+  animation-fill-mode: forwards;
+}
+
+@keyframes like {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: calc(var(--size) * (var(--frames) * -1 + 3));
+  }
+}
+@media (hover: hover) {
+  .like:hover {
+    background-color: rgba(225, 37, 94, 0.0823529412);
+  }
+  .like:hover .hearth {
+    background-position-x: calc(var(--size) * (var(--frames) * -1 + 1));
+  }
+}
 .faqs {
   display: flex;
   flex-direction: column;
@@ -1411,7 +1476,7 @@ form .modal-form-input select {
   text-align: start;
   width: 100%;
   height: max-content;
-  background-color: #1458be;
+  background-color: hsl(0, 79%, 36%);
 }
 
 .faqs .faqs-title {
@@ -1549,9 +1614,11 @@ form .modal-form-input select {
   background-color: #fff;
   border: 1px solid black;
   box-shadow: 3px 5px 4px #888888;
-  color: #0084ff;
+  color: #080909;
   display: flex;
   font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
   gap: 0.5rem;
   height: 5vh;
   position: absolute;
@@ -1567,14 +1634,10 @@ form .modal-form-input select {
 }
 
 .contact .contact-map .contact-map-zoom .contact-map-zoom-link small a {
-  background-color: #0084ff;
+  background-color: #050404;
   padding: 0.3rem 0.3rem;
-  color: #fff;
+  color: #020101;
   font-weight: bold;
-}
-
-.contact .contact-map .contact-map-zoom .contact-map-zoom-link small a:hover {
-  color: blue;
 }
 
 .contact .contact-map iframe {
@@ -1611,7 +1674,8 @@ form .modal-form-input select {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   backface-visibility: hidden;
   padding: 5% 10%;
   position: absolute;
@@ -1622,7 +1686,7 @@ form .modal-form-input select {
 .flip-card-front {
   width: 100%;
   align-items: flex-start;
-  background-color: #fff;
+  background-color: #ea4747;
   color: black;
   display: flex;
   flex-direction: column;
@@ -1642,7 +1706,7 @@ form .modal-form-input select {
 
 .flip-card-item-text {
   font-size: 1.1rem;
-  color: #a5aeb3;
+  color: hsl(0, 0%, 0%);
 }
 
 .flip-card-item-column {
@@ -1658,7 +1722,7 @@ form .modal-form-input select {
 
 .contact-btn {
   width: 100%;
-  background-color: #0084ff;
+  background-color: #000000;
   padding: 1rem 1rem;
   border: none;
   font-size: 2rem;
@@ -1670,12 +1734,13 @@ form .modal-form-input select {
 }
 
 .contact-btn:hover {
-  background-color: black;
+  background-color: rgb(249, 249, 249);
   transition: 0.5s ease-out;
+  color: #000;
 }
 
 .flip-card-back {
-  background-color: #0084ff;
+  background-color: #000000;
   transform: rotateY(180deg);
 }
 
@@ -1683,7 +1748,7 @@ form .modal-form-input select {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 4rem;
+  gap: 1.5rem;
   height: 100%;
   width: 100%;
 }
@@ -1726,7 +1791,7 @@ form .modal-form-input select {
 }
 
 .contact .flip-card .flip-card-inner .flip-card-back .flip-card-message {
-  height: 40%;
+  height: 100%;
   width: 100%;
 }
 

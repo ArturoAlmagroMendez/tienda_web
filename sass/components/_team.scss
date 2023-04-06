@@ -6,8 +6,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: rgb(99, 150, 215);
-    
+    background-color: hsl(0, 0%, 0%);
     z-index:1;
     
   }
@@ -17,29 +16,36 @@
     width: 100%;
     height: 100%;
   }
-  .team .team-title{
-    font-size: 1.8em;
+  .team .team-title h3{
+    font-family: Anime;
+    font-size: 6rem;
+    font-weight: 300;
+
   }
-  .team .team-text {
-    margin-bottom: 3em;
+  .team .team-text{
+    margin-bottom: 3rem;
+  }
+  .team .team-text p{
+    font-size: 2rem;
   }
   .team-content {
     display: flex;
     justify-content: center;
-    gap: 2em;
-    padding:0 10%;
-   
+    gap: 4rem;
+    padding:0 10%;   
   }
   .team-content .team-item {
     align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    gap:0.5em;
+    gap:0.2rem;
     height:100%;
     width:25%;
   }
+ 
   .team-content .team-item .team-item-image {
-    height:70%;                
+    height:60%;                
     position: relative;
     width:100%;
 }
@@ -65,28 +71,26 @@
     justify-content: center;
     padding: 5% 0;
     gap:.6rem;
+    
   }
-  .team-content .team-item .team-social-networks .social-networks {
-    align-items: center;
-    transition:2s linear;
-  } 
+ 
 
   .team-content .team-item .team-social-networks .social-networks.active {
     position: relative; 
   }
   .team-content .team-item .team-social-networks .social-networks.active span:first-of-type {
-    transform: translateY(3px) rotate(45deg);
+    transform: translateY(1px) rotate(45deg);
   } 
   .team-content .team-item .team-social-networks .social-networks.active span:nth-child(2) {
     opacity: 0;
   } 
   .team-content .team-item .team-social-networks .social-networks.active span:nth-child(3) {
-    transform: translateY(-9px) rotate(-45deg);
+    transform: translateY(-12px) rotate(-45deg);
   } 
   .line{
-    width: 1.5rem;
+    width: 1.4rem;
     height: .2rem;
-    background-color: #ffffff;
+    background-color: hsl(0, 0%, 100%);
     display: block;
     margin: 3px auto;
     -webkit-transition: all 0.3s ease-in-out;
@@ -131,8 +135,8 @@
   }
  
   .team-content .team-item .team-item-title h5{
-    font-size: 1.5rem;
-    color:#000000;
+    font-size: 1.7rem;
+    color:hsl(0, 0%, 96%);
   }
   .team-content .team-item .team-item-text-subtitle p{
     font-size: 1rem;

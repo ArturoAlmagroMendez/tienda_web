@@ -34,6 +34,7 @@
 .featured .featured-title h2 {
   font-size: 4.3rem;
   font-family: Anime;
+  font-weight: 300;
   margin: 0;
   letter-spacing: 11px;
   opacity: 0;
@@ -47,7 +48,7 @@
 
 .featured-subtitle p{
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 300;
   font-family: Anime;
   letter-spacing: 2px;
   opacity: 0;
@@ -105,14 +106,10 @@
   width: 12rem;
   height: 12rem;
 }
-.featured .featured-content .featured-item .featured-item-title {
-  font-weight: 600;
-  font-size: 1.1rem;
-  
-
-}
 .featured .featured-content .featured-item .featured-item-title h3{
   font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.9rem;
 }
 .featured .featured-content .featured-item .featured-item-text p{
   font-size: 1.5rem;
