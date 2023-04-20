@@ -1317,16 +1317,17 @@
                         <div class="flip-card-back">
                             <form>
                                 <div class="flip-card-inputs">
-                                    <div class="flip-card-name">
-                                        <input type="text" id="name" name="name" placeholder="Name" required>
+                                    <div class="flip-card-input">
+                                        <span id="nameCount">0/20</span>
+                                        <input type="text" id="name" name="name" placeholder="Name" maxlength="20" required>
                                     </div>
-                                   
-                                    <div class="flip-card-email">
-                                        <input type="email" id="email" name="email" placeholder="Email" required>
+                                    <div class="flip-card-input">
+                                        <span id="emailCount">0/20</span>
+                                        <input type="email" id="email" name="email" maxlength="20" placeholder="Email" required>
                                     </div>
                                 </div> 
                                 <div class="flip-card-message">
-                                    <textarea id="message" name="message" placeholder="Place your message here.." required></textarea>
+                                    <textarea id="message" name="message" placeholder="Place your message here.."  required></textarea>
                                 </div>
                                 <div class="flip-card-submit">
                                     <button  class="contact-btn">Send message</button>

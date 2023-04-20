@@ -93,7 +93,7 @@
 .flip-card-front {
   width: 100%;
   align-items: flex-start;
-  background-color: #ea4747;
+  background-color: #ffffff;
   color: black;
   display: flex;
   flex-direction: column;
@@ -139,17 +139,15 @@
   text-transform: uppercase;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
-
 }
 
 .contact-btn:hover {
-  background-color: rgb(249, 249, 249);
+  background-color: hsl(0, 7%, 63%);
   transition: .5s ease-out;
-  color: #000;
 }
 
 .flip-card-back {
-  background-color: #000000;
+  background-color: #1833cc;
   transform: rotateY(180deg);
 }
 
@@ -168,11 +166,7 @@
   width: 100%;
 }
 
-.flip-card-back form .flip-card-inputs .flip-card-name {
-  width: 45%;
-}
-
-.flip-card-back form .flip-card-inputs .flip-card-email {
+.flip-card-back form .flip-card-inputs .flip-card-input {
   width: 45%;
 }
 
@@ -186,6 +180,7 @@
   font-size: 1rem;
   padding: .8rem;
   width: 100%;
+  font-family: 'Poppins' , 'sans-serif';
 }
 
 .flip-card-back form .flip-card-inputs input::placeholder {
@@ -228,9 +223,9 @@
 }
 
 .contact .flip-card .flip-card-inner .flip-card-back .flip-card-submit button {
-  background-color: #fff;
+  background-color: hsl(0, 0%, 0%);
   border: none;
-  color: #000;
+  color: hsl(0, 0%, 91%);
   cursor: pointer;
   font-size: 2rem;
   font-weight: 600;
@@ -241,11 +236,14 @@
 }
 
 .contact .flip-card .flip-card-inner .flip-card-back .flip-card-submit button:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: hsl(0, 0%, 100%);
+  color:hsl(0, 0%, 0%);
   transition: .5s ease-out;
 }
 
 .flip-card-inner.flipped {
   transform: rotateY(180deg);
+}
+span{
+  font-family:'Poppins' , sans-serif;
 }
