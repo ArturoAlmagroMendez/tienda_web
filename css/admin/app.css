@@ -1,0 +1,175 @@
+.admin {
+  width: 80%;
+  height: 100vh;
+  gap: 1rem;
+  padding: 1rem 10%;
+  background-color: hsl(249, 90%, 55%);
+  color: #fff;
+}
+
+.admin form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin .admin-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin .admin-header .admin-header-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+}
+
+.admin .admin-header .admin-header-hamburger {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.admin .admin-header .admin-header-hamburger .line {
+  width: 4rem;
+  height: 0.4rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.admin .admin-bar {
+  background-color: hsl(0, 0%, 100%);
+  height: 3rem;
+  padding: 0 10%;
+  text-align: center;
+  width: 80%;
+}
+
+.admin-content {
+  display: flex;
+  gap: 2rem;
+}
+
+.admin-content-aside {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-content-aside-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-content-aside-item-header {
+  background-color: hsl(194, 81%, 65%);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-button,
+.delete-button {
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.edit-button svg,
+.delete-button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.admin-content-aside-item-header .delete-button {
+  padding: 0 0.5rem;
+}
+
+.admin-content-aside-item-content {
+  background-color: hsl(214, 86%, 67%);
+  padding: 1rem;
+}
+
+.admin-content-login {
+  height: 2.5rem;
+  width: 60%;
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.admin-content-login-tabs {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-content-login .admin-content-login-tabs .tabs {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  color: #000;
+  cursor: pointer;
+}
+
+.admin-content-login .admin-content-login-tabs-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.admin-content-login .admin-content-login-tabs-item.active {
+  background-color: aqua;
+}
+
+.admin-content-login .admin-content-login-tabs-item span {
+  padding: 0 1rem;
+}
+
+.admin-content-login .admin-content-login-tabs .buttons {
+  display: flex;
+  padding: 0.2rem 1rem;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.admin-content-login .admin-content-login-tabs-button {
+  cursor: pointer;
+}
+
+.admin-content-login-tab {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-content-login-tab input {
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: rgb(112, 231, 231);
+}
+
+.admin-content-login-form-user {
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-content-login-form-user .admin-form-username,
+.admin-content-login-form-user .admin-form-email,
+.admin-content-login-form-password .admin-form-password,
+.admin-content-login-form-password .admin-form-password-check {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-content-login-form-password {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=app.css.map */
