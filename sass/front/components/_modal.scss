@@ -256,7 +256,7 @@
   .modal-content ul li a:hover{
     border-bottom: 1px solid black;
   }
-  .modal-content ul li a.active{
+  .modal-content ul li a.tab.active{
     border-bottom: 1px solid black;
   }
   .modal-description{
@@ -264,19 +264,18 @@
     flex-direction: column;
     gap:.5rem;
   }
-  .modal-content .modal-description-text{
+  .modal-content .tab-content{
    display:none;
   }
   .modal-content .modal-description-list{
     display:flex;
     flex-direction: column;
     gap:1rem;
-
   }
-   .modal-content .modal-description-text p{
+   .modal-content .tab-content p{
     font-size:1.2rem;
   }
-  .modal-content .modal-description-text.active{
+  .modal-content .tab-content.active{
     display:block;
   }
   .checkout{
