@@ -56,7 +56,7 @@
     width:40%;
     display:flex;
     flex-direction: column;
-    gap:.5rem;
+    gap:.2rem;
 }
 .admin-content-aside-item{
     width: 100%;
@@ -132,7 +132,7 @@
     cursor: pointer; 
 }
 .admin-content-login-tabs-item.active{
-    background-color: rgb(117, 117, 238);
+    background-color: rgb(36, 92, 177);
 }
 .tab.active{
 }
@@ -180,7 +180,7 @@
 .tab-content input{
     width:100%;
     padding:1.5rem 0;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     font-family: 'Poppins' , sans-serif;
     background-color: hsl(194, 57%, 58%);
 

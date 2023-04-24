@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/plantilla.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/front/index.js"></script>
 </head>
 
 <body>
@@ -1318,11 +1318,11 @@
                             <form>
                                 <div class="flip-card-inputs">
                                     <div class="flip-card-input">
-                                        <input class="limited" type="text" id="name" name="name" placeholder="Name" maxlength="20" required>
+                                        <input class="limited" type="text" id="name" name="name" placeholder="Name" maxlength="20" data-validate="only-letters" required>
 
                                     </div>
                                     <div class="flip-card-input">
-                                        <input class="limited" type="email" id="email" name="email" maxlength="20" placeholder="Email" required>
+                                        <input class="limited" type="email" id="email" name="email" maxlength="20" placeholder="Email" data-validate="email" required>
 
                                     </div>
                                 </div> 
@@ -1330,7 +1330,7 @@
                                     <textarea id="message" name="message" placeholder="Place your message here.."  required></textarea>
                                 </div>
                                 <div class="flip-card-submit">
-                                    <button  class="contact-btn">Send message</button>
+                                    <button  class="send-btn">Send message</button>
                                 </div>
                             </form>
                         </div>
@@ -1421,19 +1421,19 @@
                         </div>
                        
                         <div class="checkout">
-                            <button  id="modal-button">Comprar</button>
+                            <button id="modal-button">Comprar</button>
                         </div> 
                     </div>
                     <div class="modal-content-hidden">
                         <div class="modal-form">
-                            <form action="">
+                            <form>
                                
                                 <div class="modal-form-name-surname">
-                                    <input type="text" placeholder="First name">
-                                    <input type="text" placeholder="Last name">
+                                    <input type="text" placeholder="First name" data-validate="only-letters">
+                                    <input type="text" placeholder="Last name" data-validate="only-letters">
                                 </div>
                                 <div class="modal-form-input">
-                                    <input type="email" placeholder="E-mail address">
+                                    <input type="email" placeholder="E-mail address" data-validate="email">
                                 </div>
                                 <div class="modal-form-input">
                                     <input type="text" placeholder="Address Line 1">
@@ -1442,8 +1442,8 @@
                                     <input type="text" placeholder="Adress Line 2">
                                 </div>
                                 <div class="modal-form-location">
-                                    <input type="text" placeholder="State">
-                                    <input type="text" placeholder="Zip Code">
+                                    <input type="text" placeholder="State" data-validate="only-letters">
+                                    <input type="number" placeholder="Zip Code" data-validate="only-numbers">
                                 </div>
                                 <div class="modal-form-input">
                                     <select name="" id="" >
@@ -1451,10 +1451,12 @@
                                     </select>
                                 </div>
                                 <div class="modal-form-button">
-                                    <button>Buy</button>
+                                    <button class="send-btn">Buy</button>
                                 </div>
                                 
                             </form>
+                            
+           
                             
                         </div>  
                     </div>

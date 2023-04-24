@@ -147,7 +147,7 @@
 }
 
 .flip-card-back {
-  background-color: #1833cc;
+  background-color: #b4bffc;
   transform: rotateY(180deg);
 }
 
@@ -172,8 +172,6 @@
 
 .flip-card-back form .flip-card-inputs input {
   background: #fff;
-  border: none;
-  border-bottom: 1px solid #000;
   border-radius: 5px;
   box-sizing: border-box;
   color: #000;
@@ -183,8 +181,13 @@
   font-family: 'Poppins' , 'sans-serif';
 }
 
+.invalid{
+  border:1px solid red;
+}
+.invalid::placeholder{
+  color:red;
+}
 .flip-card-back form .flip-card-inputs input::placeholder {
-  color: #000;
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
 }

@@ -281,6 +281,13 @@
   .checkout{
     text-align:center;
   }
+  .invalid{
+    border: 1px solid red;
+    
+  }
+  .invalid::placeholder{
+    color:red;
+  }
   .checkout button{
     font-size:1rem;
     padding:1rem 1.5rem;
@@ -299,4 +306,27 @@
    transform: scale(1.3);
    transition:.3s ease-in-out;
   }
-  
+  #notification{
+    background-color: hsl(0, 0%, 89%);
+    border-radius: 0.2rem;
+    bottom: 1rem;
+    color: rgb(0, 0, 0);
+    opacity: 0;
+    padding: 1rem;
+    position: fixed;
+    right: 1rem;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#notification.active{
+    opacity: 1;
+}
+
+#notification.success{
+    border-top: 0.2rem solid hsl(120, 100%, 50%);
+}
+
+#notification p{
+    font-size: 1.5rem;
+}

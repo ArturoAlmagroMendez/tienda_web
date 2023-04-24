@@ -28,6 +28,11 @@ export default (() => {
     textSlider.classList.remove("active");
     closeButton.classList.remove("active");
     returnButtonContainer.classList.remove("active");
+    const invalids = document.querySelectorAll(".invalid");
+
+    invalids.forEach((invalid) =>{
+      invalid.classList.remove('invalid');
+    });
 
     tabs.forEach((tab) => {
       tab.classList.remove("active");
