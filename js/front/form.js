@@ -36,7 +36,7 @@ export let validateForm = formInputs => {
             if(formInputs[i].value.match(validators[formInputs[i].dataset.validate].regex) == null) {
                 formInputs[i].classList.add('invalid');
                 validForm = false;
-                let errorMessage = validators[formInputs[i].dataset.validate].message;
+                let errorMessage = validators[formInputs[i].dataset.validate].                                 message;
                 formInputs[i].value = '';
                 formInputs[i].placeholder = errorMessage;
             }else{
